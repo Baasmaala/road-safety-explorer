@@ -53,3 +53,34 @@ Honest disclosure of what these datasets do and do not capture:
 - **IHME data ends in 2019.** The COVID-19 pandemic substantially changed road usage and fatality patterns globally. Post-2019 patterns are not captured in our forecasts.
 - **Forecasts are statistical projections, not predictions.** They assume past trends continue and do not account for policy changes, conflicts, or other interventions.
 - **Cluster labels are data-driven, not policy assessments.** Two countries sharing a cluster have similar indicator profiles — this is not an endorsement or criticism of either country's road safety policy.
+## AI Tool Usage Disclosure
+
+This project was developed with assistance from AI tools. In accordance with the
+course requirements, this section documents where and how AI assistance was used.
+
+### Tools used
+- **Claude (Anthropic)** 
+- **Chat gpt**
+ used by team members during planning
+
+### Where AI was used
+
+**Project planning & decisions (Basmala)**
+- Brainstormed and evaluated ~15 candidate project ideas before settling on the final one
+- Verified dataset availability and structure before committing to the topic
+- Drafted the initial project plan, branch strategy, and team handoff structure
+
+**Notebook 01 — Data Cleaning & Clustering (Basmala)**
+- Discussed the choice between mean vs median imputation
+- Discussed how to handle skewed count columns (drop raw fatality counts vs log-transform vehicle counts)
+
+**Notebook 02 — PCA & Anomaly Detection (Osama)**
+
+
+**Notebook 03 — Time Series & Forecasting (Omar)**
+
+
+**Streamlit app**
+
+
+
