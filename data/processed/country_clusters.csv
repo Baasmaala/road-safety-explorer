@@ -1,0 +1,172 @@
+ISO_3 country name,Country name,Income group,WHO Region,Cluster,Cluster_name
+ALB,Albania,Upper middle income,European Region,1,Rich-country car culture
+DZA,Algeria,Lower middle income,African Region,0,Developing-country road profile
+ATG,Antigua and Barbuda,High income,Region of the Americas,2,Low-motorization mixed
+ARG,Argentina,Upper middle income,Region of the Americas,1,Rich-country car culture
+ARM,Armenia,Upper middle income,European Region,0,Developing-country road profile
+AUS,Australia,High income,Western Pacific Region,1,Rich-country car culture
+AUT,Austria,High income,European Region,1,Rich-country car culture
+AZE,Azerbaijan,Upper middle income,European Region,0,Developing-country road profile
+BHS,Bahamas,High income,Region of the Americas,0,Developing-country road profile
+BHR,Bahrain,High income,Eastern Mediterranean Region,2,Low-motorization mixed
+BGD,Bangladesh,Lower middle income,South-East Asia Region,0,Developing-country road profile
+BRB,Barbados,High income,Region of the Americas,0,Developing-country road profile
+BLR,Belarus,Upper middle income,European Region,1,Rich-country car culture
+BEL,Belgium,High income,European Region,1,Rich-country car culture
+BLZ,Belize,Upper middle income,Region of the Americas,0,Developing-country road profile
+BEN,Benin,Lower middle income,African Region,0,Developing-country road profile
+BTN,Bhutan,Lower middle income,South-East Asia Region,3,Atypical reporting
+BOL,Bolivia (Plurinational State of),Lower middle income,Region of the Americas,0,Developing-country road profile
+BIH,Bosnia and Herzegovina,Upper middle income,European Region,1,Rich-country car culture
+BWA,Botswana,Upper middle income,African Region,0,Developing-country road profile
+BRA,Brazil,Upper middle income,Region of the Americas,1,Rich-country car culture
+VGB,British Virgin Islands,High income,Region of the Americas,2,Low-motorization mixed
+BGR,Bulgaria,Upper middle income,European Region,1,Rich-country car culture
+BFA,Burkina Faso,Low income,African Region,0,Developing-country road profile
+BDI,Burundi,Low income,African Region,0,Developing-country road profile
+CPV,Cabo Verde,Lower middle income,African Region,0,Developing-country road profile
+KHM,Cambodia,Lower middle income,Western Pacific Region,0,Developing-country road profile
+CMR,Cameroon,Lower middle income,African Region,0,Developing-country road profile
+CAN,Canada,High income,Region of the Americas,1,Rich-country car culture
+CAF,Central African Republic,Low income,African Region,0,Developing-country road profile
+TCD,Chad,Low income,African Region,0,Developing-country road profile
+CHL,Chile,High income,Region of the Americas,1,Rich-country car culture
+CHN,China,Upper middle income,Western Pacific Region,1,Rich-country car culture
+COL,Colombia,Upper middle income,Region of the Americas,0,Developing-country road profile
+COM,Comoros,Lower middle income,African Region,0,Developing-country road profile
+COG,Congo,Lower middle income,African Region,2,Low-motorization mixed
+COK,Cook Islands,,Western Pacific Region,2,Low-motorization mixed
+CRI,Costa Rica,Upper middle income,Region of the Americas,0,Developing-country road profile
+CIV,Côte d'Ivoire,Lower middle income,African Region,0,Developing-country road profile
+HRV,Croatia,High income,European Region,1,Rich-country car culture
+CUB,Cuba,Upper middle income,Region of the Americas,1,Rich-country car culture
+CYP,Cyprus,High income,European Region,2,Low-motorization mixed
+CZE,Czechia,High income,European Region,1,Rich-country car culture
+COD,Democratic Republic of the Congo,Low income,African Region,0,Developing-country road profile
+DNK,Denmark,High income,European Region,1,Rich-country car culture
+DMA,Dominica,Upper middle income,Region of the Americas,0,Developing-country road profile
+DOM,Dominican Republic,Upper middle income,Region of the Americas,0,Developing-country road profile
+ECU,Ecuador,Upper middle income,Region of the Americas,0,Developing-country road profile
+EGY,Egypt,Lower middle income,Eastern Mediterranean Region,0,Developing-country road profile
+SLV,El Salvador,Lower middle income,Region of the Americas,0,Developing-country road profile
+ERI,Eritrea,Low income,African Region,2,Low-motorization mixed
+EST,Estonia,High income,European Region,1,Rich-country car culture
+SWZ,Eswatini,Lower middle income,African Region,2,Low-motorization mixed
+ETH,Ethiopia,Low income,African Region,0,Developing-country road profile
+FIN,Finland,High income,European Region,1,Rich-country car culture
+FRA,France,High income,European Region,1,Rich-country car culture
+GAB,Gabon,Upper middle income,African Region,2,Low-motorization mixed
+GMB,Gambia,Low income,African Region,0,Developing-country road profile
+GEO,Georgia,Upper middle income,European Region,2,Low-motorization mixed
+DEU,Germany,High income,European Region,1,Rich-country car culture
+GHA,Ghana,Lower middle income,African Region,0,Developing-country road profile
+GRC,Greece,High income,European Region,1,Rich-country car culture
+GTM,Guatemala,Upper middle income,Region of the Americas,0,Developing-country road profile
+GIN,Guinea,Low income,African Region,3,Atypical reporting
+GNB,Guinea-Bissau,Low income,African Region,0,Developing-country road profile
+GUY,Guyana,Upper middle income,Region of the Americas,0,Developing-country road profile
+HTI,Haiti,Lower middle income,Region of the Americas,0,Developing-country road profile
+HND,Honduras,Lower middle income,Region of the Americas,0,Developing-country road profile
+HUN,Hungary,High income,European Region,1,Rich-country car culture
+ISL,Iceland,High income,European Region,1,Rich-country car culture
+IND,India,Lower middle income,South-East Asia Region,0,Developing-country road profile
+IDN,Indonesia,Lower middle income,South-East Asia Region,0,Developing-country road profile
+IRN,Iran (Islamic Republic of),Lower middle income,Eastern Mediterranean Region,0,Developing-country road profile
+IRQ,Iraq,Upper middle income,Eastern Mediterranean Region,0,Developing-country road profile
+IRL,Ireland,High income,European Region,1,Rich-country car culture
+ISR,Israel,High income,European Region,1,Rich-country car culture
+ITA,Italy,High income,European Region,1,Rich-country car culture
+JAM,Jamaica,Upper middle income,Region of the Americas,0,Developing-country road profile
+JPN,Japan,High income,Western Pacific Region,1,Rich-country car culture
+JOR,Jordan,Upper middle income,Eastern Mediterranean Region,0,Developing-country road profile
+KAZ,Kazakhstan,Upper middle income,European Region,0,Developing-country road profile
+KEN,Kenya,Lower middle income,African Region,0,Developing-country road profile
+KIR,Kiribati,Lower middle income,Western Pacific Region,2,Low-motorization mixed
+KWT,Kuwait,High income,Eastern Mediterranean Region,0,Developing-country road profile
+KGZ,Kyrgyzstan,Lower middle income,European Region,0,Developing-country road profile
+LAO,Lao People's Democratic Republic,Lower middle income,Western Pacific Region,0,Developing-country road profile
+LVA,Latvia,High income,European Region,1,Rich-country car culture
+LBN,Lebanon,Lower middle income,Eastern Mediterranean Region,0,Developing-country road profile
+LSO,Lesotho,Lower middle income,African Region,0,Developing-country road profile
+LBR,Liberia,Low income,African Region,2,Low-motorization mixed
+LBY,Libya,Upper middle income,Eastern Mediterranean Region,0,Developing-country road profile
+LTU,Lithuania,High income,European Region,1,Rich-country car culture
+LUX,Luxembourg,High income,European Region,1,Rich-country car culture
+MDG,Madagascar,Low income,African Region,0,Developing-country road profile
+MWI,Malawi,Low income,African Region,0,Developing-country road profile
+MYS,Malaysia,Upper middle income,Western Pacific Region,0,Developing-country road profile
+MDV,Maldives,Upper middle income,South-East Asia Region,2,Low-motorization mixed
+MLI,Mali,Low income,African Region,0,Developing-country road profile
+MLT,Malta,High income,European Region,1,Rich-country car culture
+MRT,Mauritania,Lower middle income,African Region,0,Developing-country road profile
+MUS,Mauritius,Upper middle income,African Region,2,Low-motorization mixed
+MEX,Mexico,Upper middle income,Region of the Americas,0,Developing-country road profile
+MNG,Mongolia,Lower middle income,Western Pacific Region,3,Atypical reporting
+MNE,Montenegro,Upper middle income,European Region,2,Low-motorization mixed
+MAR,Morocco,Lower middle income,Eastern Mediterranean Region,0,Developing-country road profile
+MOZ,Mozambique,Low income,African Region,3,Atypical reporting
+MMR,Myanmar,Lower middle income,South-East Asia Region,0,Developing-country road profile
+NAM,Namibia,Upper middle income,African Region,0,Developing-country road profile
+NPL,Nepal,Lower middle income,South-East Asia Region,0,Developing-country road profile
+NLD,Netherlands (Kingdom of the),High income,European Region,1,Rich-country car culture
+NZL,New Zealand,High income,Western Pacific Region,1,Rich-country car culture
+NIC,Nicaragua,Lower middle income,Region of the Americas,0,Developing-country road profile
+NER,Niger,Low income,African Region,0,Developing-country road profile
+NGA,Nigeria,Lower middle income,African Region,3,Atypical reporting
+NIU,Niue,,Western Pacific Region,2,Low-motorization mixed
+MKD,North Macedonia,Upper middle income,European Region,1,Rich-country car culture
+NOR,Norway,High income,European Region,1,Rich-country car culture
+PSE,Palestine,Lower middle income,Eastern Mediterranean Region,2,Low-motorization mixed
+OMN,Oman,High income,Eastern Mediterranean Region,0,Developing-country road profile
+PAK,Pakistan,Lower middle income,Eastern Mediterranean Region,0,Developing-country road profile
+PAN,Panama,High income,Region of the Americas,0,Developing-country road profile
+PRY,Paraguay,Upper middle income,Region of the Americas,0,Developing-country road profile
+PER,Peru,Upper middle income,Region of the Americas,0,Developing-country road profile
+PHL,Philippines,Lower middle income,Western Pacific Region,0,Developing-country road profile
+POL,Poland,High income,European Region,1,Rich-country car culture
+PRT,Portugal,High income,European Region,1,Rich-country car culture
+QAT,Qatar,High income,Eastern Mediterranean Region,0,Developing-country road profile
+KOR,Republic of Korea,High income,Western Pacific Region,1,Rich-country car culture
+MDA,Republic of Moldova,Upper middle income,European Region,1,Rich-country car culture
+RUS,Russian Federation,Upper middle income,European Region,1,Rich-country car culture
+RWA,Rwanda,Low income,African Region,0,Developing-country road profile
+LCA,Saint Lucia,Upper middle income,Region of the Americas,3,Atypical reporting
+WSM,Samoa,Lower middle income,Western Pacific Region,2,Low-motorization mixed
+STP,Sao Tome and Principe,Lower middle income,African Region,0,Developing-country road profile
+SAU,Saudi Arabia,High income,Eastern Mediterranean Region,0,Developing-country road profile
+SEN,Senegal,Lower middle income,African Region,0,Developing-country road profile
+SRB,Serbia,Upper middle income,European Region,1,Rich-country car culture
+SYC,Seychelles,High income,African Region,2,Low-motorization mixed
+SLE,Sierra Leone,Low income,African Region,3,Atypical reporting
+SGP,Singapore,High income,Western Pacific Region,1,Rich-country car culture
+SVK,Slovakia,High income,European Region,1,Rich-country car culture
+SVN,Slovenia,High income,European Region,1,Rich-country car culture
+SOM,Somalia,Low income,Eastern Mediterranean Region,2,Low-motorization mixed
+ZAF,South Africa,Upper middle income,African Region,0,Developing-country road profile
+SSD,South Sudan,Low income,African Region,0,Developing-country road profile
+ESP,Spain,High income,European Region,1,Rich-country car culture
+LKA,Sri Lanka,Lower middle income,South-East Asia Region,1,Rich-country car culture
+SDN,Sudan,Low income,Eastern Mediterranean Region,0,Developing-country road profile
+SUR,Suriname,Upper middle income,Region of the Americas,2,Low-motorization mixed
+SWE,Sweden,High income,European Region,1,Rich-country car culture
+CHE,Switzerland,High income,European Region,1,Rich-country car culture
+SYR,Syrian Arab Republic,Low income,Eastern Mediterranean Region,0,Developing-country road profile
+TJK,Tajikistan,Lower middle income,European Region,0,Developing-country road profile
+THA,Thailand,Upper middle income,South-East Asia Region,0,Developing-country road profile
+TLS,Timor-Leste,Lower middle income,South-East Asia Region,2,Low-motorization mixed
+TGO,Togo,Low income,African Region,2,Low-motorization mixed
+TTO,Trinidad and Tobago,High income,Region of the Americas,3,Atypical reporting
+TUN,Tunisia,Lower middle income,Eastern Mediterranean Region,0,Developing-country road profile
+TUR,Türkiye,Upper middle income,European Region,1,Rich-country car culture
+UGA,Uganda,Low income,African Region,0,Developing-country road profile
+ARE,United Arab Emirates,High income,Eastern Mediterranean Region,1,Rich-country car culture
+GBR,United Kingdom of Great Britain and Northern Ireland,High income,European Region,1,Rich-country car culture
+TZA,United Republic of Tanzania,Lower middle income,African Region,2,Low-motorization mixed
+USA,United States of America,High income,Region of the Americas,1,Rich-country car culture
+URY,Uruguay,High income,Region of the Americas,1,Rich-country car culture
+UZB,Uzbekistan,Lower middle income,European Region,0,Developing-country road profile
+VEN,Venezuela (Bolivarian Republic of),,Region of the Americas,0,Developing-country road profile
+VNM,Viet Nam,Lower middle income,Western Pacific Region,0,Developing-country road profile
+YEM,Yemen,Low income,Eastern Mediterranean Region,0,Developing-country road profile
+ZMB,Zambia,Low income,African Region,2,Low-motorization mixed
+ZWE,Zimbabwe,Lower middle income,African Region,0,Developing-country road profile
