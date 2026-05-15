@@ -1,0 +1,172 @@
+ISO_3 country name,Country name,Income group,WHO Region,PC1,PC2,Cluster,Cluster_name,anomaly_label,is_anomaly,anomaly_score
+ALB,Albania,Upper middle income,European Region,0.6041856010230886,-1.9029709309383263,1,Rich-country car culture,1,False,-0.1149571769554617
+DZA,Algeria,Lower middle income,African Region,-0.005618795255123782,2.5156153441001066,0,Developing-country road profile,1,False,-0.07531713647096777
+ATG,Antigua and Barbuda,High income,Region of the Americas,-2.917391632884973,-3.038031003293452,2,Low-motorization mixed,1,False,-0.007022939833956077
+ARG,Argentina,Upper middle income,Region of the Americas,2.654828671817124,1.552065762214346,1,Rich-country car culture,1,False,-0.09017043905446559
+ARM,Armenia,Upper middle income,European Region,-0.26432834025922564,-0.39903754059226554,0,Developing-country road profile,1,False,-0.15133005573881114
+AUS,Australia,High income,Western Pacific Region,3.9073658792614507,1.092191105595573,1,Rich-country car culture,1,False,-0.02692220905838494
+AUT,Austria,High income,European Region,2.873996545039208,-2.0540726817186843,1,Rich-country car culture,1,False,-0.1101749981432334
+AZE,Azerbaijan,Upper middle income,European Region,-2.2112686468358627,0.45403206290293635,0,Developing-country road profile,1,False,-0.0921027072420893
+BHS,Bahamas,High income,Region of the Americas,-0.6250594985571342,1.122317885679877,0,Developing-country road profile,1,False,-0.10716283317832875
+BHR,Bahrain,High income,Eastern Mediterranean Region,-1.118185194435772,-0.5433755493452957,2,Low-motorization mixed,1,False,-0.07378699520045384
+BGD,Bangladesh,Lower middle income,South-East Asia Region,-0.20643909737436492,1.4157266974371001,0,Developing-country road profile,1,False,-0.12066654489288298
+BRB,Barbados,High income,Region of the Americas,0.2837047416048965,-0.4652157589534438,0,Developing-country road profile,1,False,-0.12218713162908124
+BLR,Belarus,Upper middle income,European Region,1.149108606698692,-1.3585013999266002,1,Rich-country car culture,1,False,-0.09951442752933054
+BEL,Belgium,High income,European Region,3.6164431847109806,-1.3206961986337147,1,Rich-country car culture,1,False,-0.11215237404818018
+BLZ,Belize,Upper middle income,Region of the Americas,-1.2066910568721063,1.1388794112552214,0,Developing-country road profile,1,False,-0.12677777061872464
+BEN,Benin,Lower middle income,African Region,-2.0156112596144338,2.2870373313778516,0,Developing-country road profile,1,False,-0.07721069561531158
+BTN,Bhutan,Lower middle income,South-East Asia Region,-0.7095448751652627,-2.2564516403644186,3,Atypical reporting,1,False,-0.0038089789263306972
+BOL,Bolivia (Plurinational State of),Lower middle income,Region of the Americas,-0.3902140582974532,1.4517798539795532,0,Developing-country road profile,1,False,-0.08566886632354526
+BIH,Bosnia and Herzegovina,Upper middle income,European Region,0.3724866050221899,-1.6453756608302141,1,Rich-country car culture,1,False,-0.12582297606172815
+BWA,Botswana,Upper middle income,African Region,-0.6795973086619155,-0.7241238935830369,0,Developing-country road profile,1,False,-0.11652912613051553
+BRA,Brazil,Upper middle income,Region of the Americas,3.401240934260264,4.008983558845766,1,Rich-country car culture,1,False,-0.007728571336815704
+VGB,British Virgin Islands,High income,Region of the Americas,-1.6296175620006654,-0.5335457544673975,2,Low-motorization mixed,-1,True,0.004263579489655833
+BGR,Bulgaria,Upper middle income,European Region,2.201466330563852,-0.7554573544336584,1,Rich-country car culture,1,False,-0.11265613995179519
+BFA,Burkina Faso,Low income,African Region,-0.24388864356360399,0.7985019650222867,0,Developing-country road profile,1,False,-0.14185306652465274
+BDI,Burundi,Low income,African Region,-0.5369258325155608,0.4036151913840679,0,Developing-country road profile,1,False,-0.1541228711560389
+CPV,Cabo Verde,Lower middle income,African Region,-2.0256741874584665,0.04841522942667066,0,Developing-country road profile,1,False,-0.1254600664809729
+KHM,Cambodia,Lower middle income,Western Pacific Region,-1.278454876985275,1.786505878561091,0,Developing-country road profile,1,False,-0.08493633360898689
+CMR,Cameroon,Lower middle income,African Region,-2.1014338853387975,0.3179001341632866,0,Developing-country road profile,1,False,-0.14625068569225103
+CAN,Canada,High income,Region of the Americas,3.555083971000808,-0.034602565140948074,1,Rich-country car culture,1,False,-0.0827950522090351
+CAF,Central African Republic,Low income,African Region,-1.6530502911927578,2.4337953249218884,0,Developing-country road profile,1,False,-0.07263672076004596
+TCD,Chad,Low income,African Region,-3.116302676532454,0.587390539741711,0,Developing-country road profile,1,False,-0.08961062086012522
+CHL,Chile,High income,Region of the Americas,2.16323395114146,0.22012410703928886,1,Rich-country car culture,1,False,-0.1227428773093518
+CHN,China,Upper middle income,Western Pacific Region,2.381221417054529,2.964136287745885,1,Rich-country car culture,1,False,-0.014090471353215284
+COL,Colombia,Upper middle income,Region of the Americas,1.4352707644336966,2.230979751474985,0,Developing-country road profile,1,False,-0.07994708527978744
+COM,Comoros,Lower middle income,African Region,-0.9323136878166318,0.7505196368226578,0,Developing-country road profile,1,False,-0.07002581621422854
+COG,Congo,Lower middle income,African Region,-3.880619250680123,-2.169166596579064,2,Low-motorization mixed,1,False,-0.0848560139298355
+COK,Cook Islands,,Western Pacific Region,-4.723046183810691,-3.7461224232969927,2,Low-motorization mixed,-1,True,0.047524983518720254
+CRI,Costa Rica,Upper middle income,Region of the Americas,0.6390951278975858,0.5941406570986302,0,Developing-country road profile,1,False,-0.10972084178730435
+CIV,Côte d'Ivoire,Lower middle income,African Region,-1.5016349603242172,1.2992808757326215,0,Developing-country road profile,1,False,-0.14887341830955436
+HRV,Croatia,High income,European Region,2.539245074119132,-1.6911283494449227,1,Rich-country car culture,1,False,-0.11834144706274247
+CUB,Cuba,Upper middle income,Region of the Americas,0.4294909873562364,-1.016946629280381,1,Rich-country car culture,1,False,-0.12371077010313908
+CYP,Cyprus,High income,European Region,-2.2184713716325426,-6.861774064071808,2,Low-motorization mixed,-1,True,0.027838693985484775
+CZE,Czechia,High income,European Region,2.201725478972526,-3.3550193155904524,1,Rich-country car culture,1,False,-0.06001135336533375
+COD,Democratic Republic of the Congo,Low income,African Region,-1.9013624661504502,1.1286628591369556,0,Developing-country road profile,1,False,-0.12166644396355397
+DNK,Denmark,High income,European Region,3.270830098364227,-2.1341377172354914,1,Rich-country car culture,1,False,-0.09875451552704839
+DMA,Dominica,Upper middle income,Region of the Americas,-0.9808459414749232,-0.075386586913984,0,Developing-country road profile,1,False,-0.061301163847293616
+DOM,Dominican Republic,Upper middle income,Region of the Americas,-0.4504372382689973,2.4273832578949617,0,Developing-country road profile,1,False,-0.08333184101615121
+ECU,Ecuador,Upper middle income,Region of the Americas,-0.9436553242427548,2.294076727419203,0,Developing-country road profile,1,False,-0.09653272516945127
+EGY,Egypt,Lower middle income,Eastern Mediterranean Region,0.22807886244331524,2.1474044561886787,0,Developing-country road profile,1,False,-0.08911899223822689
+SLV,El Salvador,Lower middle income,Region of the Americas,-1.6147358170198585,1.3304461765305182,0,Developing-country road profile,1,False,-0.13835776613639472
+ERI,Eritrea,Low income,African Region,-2.685160466302081,-1.6637819131428326,2,Low-motorization mixed,1,False,-0.06531889924086748
+EST,Estonia,High income,European Region,2.287640616306109,-1.8426549719775467,1,Rich-country car culture,1,False,-0.11436480922731762
+SWZ,Eswatini,Lower middle income,African Region,-4.142089055539027,-2.0742839630086616,2,Low-motorization mixed,1,False,-0.054147142356266775
+ETH,Ethiopia,Low income,African Region,-1.2831015607763185,1.6829625742012335,0,Developing-country road profile,1,False,-0.12537285366117706
+FIN,Finland,High income,European Region,3.5077378386436644,-2.0956557445947586,1,Rich-country car culture,1,False,-0.11108996079214828
+FRA,France,High income,European Region,5.3872058016931765,-0.126780202211649,1,Rich-country car culture,1,False,-0.09194226089050073
+GAB,Gabon,Upper middle income,African Region,-4.730496230153788,-3.282640178475943,2,Low-motorization mixed,1,False,-0.05340800787910738
+GMB,Gambia,Low income,African Region,-2.3629246576656895,-0.13092913927488353,0,Developing-country road profile,1,False,-0.10124559825570073
+GEO,Georgia,Upper middle income,European Region,-5.22263204266458,-5.792423643650123,2,Low-motorization mixed,-1,True,0.022463702059996593
+DEU,Germany,High income,European Region,4.970125707425844,-0.23461719386236393,1,Rich-country car culture,1,False,-0.0606477650311491
+GHA,Ghana,Lower middle income,African Region,-1.1311253106232262,1.5799457787448408,0,Developing-country road profile,1,False,-0.1443125945151143
+GRC,Greece,High income,European Region,3.9320525478193473,0.10629399294232061,1,Rich-country car culture,1,False,-0.08664437152242954
+GTM,Guatemala,Upper middle income,Region of the Americas,-0.7170623130586509,1.8036712964083446,0,Developing-country road profile,1,False,-0.11345324484807229
+GIN,Guinea,Low income,African Region,-1.9421185160938481,1.5194436184036457,3,Atypical reporting,1,False,-0.06209487321198959
+GNB,Guinea-Bissau,Low income,African Region,-1.529228634287848,1.9562765235451787,0,Developing-country road profile,1,False,-0.11574361770891828
+GUY,Guyana,Upper middle income,Region of the Americas,-0.5479316158357512,0.6502858193890885,0,Developing-country road profile,1,False,-0.14732672420101572
+HTI,Haiti,Lower middle income,Region of the Americas,-1.5805437663600603,1.5272762368000599,0,Developing-country road profile,1,False,-0.14877315244093464
+HND,Honduras,Lower middle income,Region of the Americas,-1.023284400542813,1.6520645427985565,0,Developing-country road profile,1,False,-0.12414016851001625
+HUN,Hungary,High income,European Region,4.0589570040000895,-0.9454798299452768,1,Rich-country car culture,1,False,-0.09474902496156629
+ISL,Iceland,High income,European Region,1.9225432595453757,-3.257997462485069,1,Rich-country car culture,1,False,-0.06887023700695133
+IND,India,Lower middle income,South-East Asia Region,2.645593767733026,4.0196973599992925,0,Developing-country road profile,1,False,-0.028421029510018958
+IDN,Indonesia,Lower middle income,South-East Asia Region,1.9532956341862642,3.831682021327917,0,Developing-country road profile,1,False,-5.183948458764576e-05
+IRN,Iran (Islamic Republic of),Lower middle income,Eastern Mediterranean Region,-0.8844242545661494,1.9701204451611993,0,Developing-country road profile,1,False,-0.122100829757819
+IRQ,Iraq,Upper middle income,Eastern Mediterranean Region,-1.7513741472132263,1.5319773302977593,0,Developing-country road profile,1,False,-0.0794919481350646
+IRL,Ireland,High income,European Region,2.6407078069415695,-2.4893068329636643,1,Rich-country car culture,1,False,-0.10992658841189379
+ISR,Israel,High income,European Region,2.1090734638116033,-1.2418680076774822,1,Rich-country car culture,1,False,-0.13191970394801117
+ITA,Italy,High income,European Region,5.264381365101546,0.0020743320864478536,1,Rich-country car culture,1,False,-0.08296990017545003
+JAM,Jamaica,Upper middle income,Region of the Americas,-1.0078552299573629,0.4658662068291493,0,Developing-country road profile,1,False,-0.10405007020601031
+JPN,Japan,High income,Western Pacific Region,2.591272459380745,-0.7760571358236503,1,Rich-country car culture,1,False,-0.0724205163166054
+JOR,Jordan,Upper middle income,Eastern Mediterranean Region,-1.2326904758973989,-0.644031658763015,0,Developing-country road profile,1,False,-0.14179598498599943
+KAZ,Kazakhstan,Upper middle income,European Region,-0.48493074378749035,-0.033455591445909746,0,Developing-country road profile,1,False,-0.11474255644422088
+KEN,Kenya,Lower middle income,African Region,-2.0725186274545715,0.7553110265160166,0,Developing-country road profile,1,False,-0.10614315511602701
+KIR,Kiribati,Lower middle income,Western Pacific Region,0.12833773467674287,-1.7509561059321967,2,Low-motorization mixed,1,False,-0.10106014059057711
+KWT,Kuwait,High income,Eastern Mediterranean Region,-0.6271648822878712,-0.05271958570606774,0,Developing-country road profile,1,False,-0.11598537009691012
+KGZ,Kyrgyzstan,Lower middle income,European Region,-1.8944710714565047,0.646769756254417,0,Developing-country road profile,1,False,-0.09360473988113543
+LAO,Lao People's Democratic Republic,Lower middle income,Western Pacific Region,-1.146142192077871,1.5511178561170624,0,Developing-country road profile,1,False,-0.1269294840284445
+LVA,Latvia,High income,European Region,1.233946198311212,-2.0356170370696334,1,Rich-country car culture,1,False,-0.12755546768428538
+LBN,Lebanon,Lower middle income,Eastern Mediterranean Region,0.6913988186788613,0.018371289860150082,0,Developing-country road profile,1,False,-0.11607716416282587
+LSO,Lesotho,Lower middle income,African Region,-2.6746205571796744,1.1218426569148325,0,Developing-country road profile,1,False,-0.11185343740847925
+LBR,Liberia,Low income,African Region,-4.857640964031069,-1.685747080212699,2,Low-motorization mixed,1,False,-0.01842145945567586
+LBY,Libya,Upper middle income,Eastern Mediterranean Region,-4.19901054496346,1.1157029802723377,0,Developing-country road profile,1,False,-0.013583985494464046
+LTU,Lithuania,High income,European Region,3.2693220469132753,-1.146183493822812,1,Rich-country car culture,1,False,-0.08542601927211724
+LUX,Luxembourg,High income,European Region,2.4571666699199657,-3.617229819107544,1,Rich-country car culture,1,False,-0.04953168127927693
+MDG,Madagascar,Low income,African Region,-2.1062389247956874,0.3176080771266398,0,Developing-country road profile,1,False,-0.06852691769385855
+MWI,Malawi,Low income,African Region,-0.9346348121068611,0.8231968307871885,0,Developing-country road profile,1,False,-0.16446031804671235
+MYS,Malaysia,Upper middle income,Western Pacific Region,-0.528645678405111,1.2597596256694394,0,Developing-country road profile,1,False,-0.1044466106557021
+MDV,Maldives,Upper middle income,South-East Asia Region,-0.4566786623667568,-1.8437855596747026,2,Low-motorization mixed,-1,True,5.1839484587534734e-05
+MLI,Mali,Low income,African Region,-1.325064367875132,1.4227670383572155,0,Developing-country road profile,1,False,-0.1086274549752565
+MLT,Malta,High income,European Region,0.8899339218204376,-1.869829890390702,1,Rich-country car culture,1,False,-0.10621912444038428
+MRT,Mauritania,Lower middle income,African Region,-1.8433399988335637,0.7070140357728182,0,Developing-country road profile,1,False,-0.15045477497773257
+MUS,Mauritius,Upper middle income,African Region,-1.7059864249068344,-1.6661669447853709,2,Low-motorization mixed,1,False,-0.08739126017559856
+MEX,Mexico,Upper middle income,Region of the Americas,2.233563776751606,3.4700211265713192,0,Developing-country road profile,-1,True,0.0033556727313537316
+MNG,Mongolia,Lower middle income,Western Pacific Region,-0.37821915289391933,-0.5972600534440206,3,Atypical reporting,1,False,-0.1119096115370451
+MNE,Montenegro,Upper middle income,European Region,0.27944930898962633,-2.9699158388444835,2,Low-motorization mixed,1,False,-0.07890679913899912
+MAR,Morocco,Lower middle income,Eastern Mediterranean Region,-0.02601585903802828,1.6656827877995626,0,Developing-country road profile,1,False,-0.09912167971434194
+MOZ,Mozambique,Low income,African Region,-1.1533822591357632,0.21825623752728412,3,Atypical reporting,1,False,-0.06414824005439984
+MMR,Myanmar,Lower middle income,South-East Asia Region,-0.7122426830485292,2.7194607021149313,0,Developing-country road profile,1,False,-0.06638099419441734
+NAM,Namibia,Upper middle income,African Region,-2.3890902827802876,0.264179557451197,0,Developing-country road profile,1,False,-0.11257586326613234
+NPL,Nepal,Lower middle income,South-East Asia Region,-1.8594415194449874,2.4044214135821997,0,Developing-country road profile,1,False,-0.11279154995747509
+NLD,Netherlands (Kingdom of the),High income,European Region,4.887536398588556,-2.171186695963839,1,Rich-country car culture,1,False,-0.009811289047821026
+NZL,New Zealand,High income,Western Pacific Region,3.1137217837963944,-1.3341093421523345,1,Rich-country car culture,1,False,-0.10276421868647778
+NIC,Nicaragua,Lower middle income,Region of the Americas,-0.9359361561731416,0.6820326544229252,0,Developing-country road profile,1,False,-0.1192865689981657
+NER,Niger,Low income,African Region,-0.2270630288878634,-0.014044664840402586,0,Developing-country road profile,1,False,-0.1130793343819565
+NGA,Nigeria,Lower middle income,African Region,1.8154310302357894,-1.063469110501569,3,Atypical reporting,1,False,-0.03522493167243618
+NIU,Niue,,Western Pacific Region,-0.9704679047453717,-1.1532689590027432,2,Low-motorization mixed,-1,True,0.07348086921709585
+MKD,North Macedonia,Upper middle income,European Region,0.8564449988781285,-2.5427499419199258,1,Rich-country car culture,1,False,-0.11031524971510831
+NOR,Norway,High income,European Region,3.815938584783974,-2.271505428505806,1,Rich-country car culture,1,False,-0.0879101084273346
+PSE,Palestine,Lower middle income,Eastern Mediterranean Region,-0.2743100599566639,-2.6330813491743164,2,Low-motorization mixed,1,False,-0.04545171511514762
+OMN,Oman,High income,Eastern Mediterranean Region,-1.9316800831476066,2.1130618954262466,0,Developing-country road profile,1,False,-0.05402058080175509
+PAK,Pakistan,Lower middle income,Eastern Mediterranean Region,0.07437872022395153,2.6226466902948546,0,Developing-country road profile,1,False,-0.04328232284969358
+PAN,Panama,High income,Region of the Americas,-0.3999969305931189,-0.017601305889142535,0,Developing-country road profile,1,False,-0.1473834817389723
+PRY,Paraguay,Upper middle income,Region of the Americas,0.4673869336211016,1.0482118363385182,0,Developing-country road profile,1,False,-0.09779798135562584
+PER,Peru,Upper middle income,Region of the Americas,1.0477225711121294,1.4379996572352167,0,Developing-country road profile,1,False,-0.12793256386750756
+PHL,Philippines,Lower middle income,Western Pacific Region,0.4888916364991997,0.15723541125197352,0,Developing-country road profile,1,False,-0.00040800218312408987
+POL,Poland,High income,European Region,4.593275396522871,0.05397530801846609,1,Rich-country car culture,1,False,-0.09340112442291004
+PRT,Portugal,High income,European Region,3.5223487607308175,-0.9683011589128748,1,Rich-country car culture,1,False,-0.12543119761489763
+QAT,Qatar,High income,Eastern Mediterranean Region,-0.6753242891999575,-0.11666247636896837,0,Developing-country road profile,1,False,-0.11328576814442803
+KOR,Republic of Korea,High income,Western Pacific Region,1.896155025809985,1.8261390546400127,1,Rich-country car culture,1,False,-0.08474100311686728
+MDA,Republic of Moldova,Upper middle income,European Region,0.5025663843843162,-1.0221066496950202,1,Rich-country car culture,1,False,-0.13941603317232476
+RUS,Russian Federation,Upper middle income,European Region,3.1247092530881058,2.235448478189662,1,Rich-country car culture,1,False,-0.04987230582576602
+RWA,Rwanda,Low income,African Region,-1.2730326700475876,0.13479722579607922,0,Developing-country road profile,1,False,-0.12685526278099418
+LCA,Saint Lucia,Upper middle income,Region of the Americas,0.267453984038019,-1.9454524401984894,3,Atypical reporting,1,False,-0.03566090020306817
+WSM,Samoa,Lower middle income,Western Pacific Region,-3.9127839348699,-3.804111969522485,2,Low-motorization mixed,1,False,-0.013913827253491218
+STP,Sao Tome and Principe,Lower middle income,African Region,-1.4556693624979813,0.6241339880976069,0,Developing-country road profile,1,False,-0.11993383151009807
+SAU,Saudi Arabia,High income,Eastern Mediterranean Region,-1.7796902527812637,2.4624024531946986,0,Developing-country road profile,1,False,-0.10956507127280724
+SEN,Senegal,Lower middle income,African Region,-1.4433268209835717,0.3981782848287265,0,Developing-country road profile,1,False,-0.0962385411449101
+SRB,Serbia,Upper middle income,European Region,1.3443565672331532,-1.5876408384813303,1,Rich-country car culture,1,False,-0.13360198527541334
+SYC,Seychelles,High income,African Region,-1.6004344329625726,-0.7613132324636063,2,Low-motorization mixed,1,False,-0.1009569514755197
+SLE,Sierra Leone,Low income,African Region,-1.2172408529945384,-0.33352335974823627,3,Atypical reporting,1,False,-0.10025743250852809
+SGP,Singapore,High income,Western Pacific Region,1.2842659249776525,-1.4435298699047125,1,Rich-country car culture,1,False,-0.09308392586876646
+SVK,Slovakia,High income,European Region,2.3298006411509764,-1.874959311637563,1,Rich-country car culture,1,False,-0.1327425222040568
+SVN,Slovenia,High income,European Region,2.7808523380825108,-2.0185130542366188,1,Rich-country car culture,1,False,-0.10003700849784086
+SOM,Somalia,Low income,Eastern Mediterranean Region,-4.727007240271761,-1.1066650020322342,2,Low-motorization mixed,1,False,-0.017005991501607975
+ZAF,South Africa,Upper middle income,African Region,-0.9605448348758515,2.253387211189041,0,Developing-country road profile,1,False,-0.09497201006538736
+SSD,South Sudan,Low income,African Region,-4.19830985147679,0.6528537386876392,0,Developing-country road profile,1,False,-0.06744327591421961
+ESP,Spain,High income,European Region,4.386954752187302,0.07761944333698091,1,Rich-country car culture,1,False,-0.09850643347242921
+LKA,Sri Lanka,Lower middle income,South-East Asia Region,1.5437915567509821,0.840407956772538,1,Rich-country car culture,1,False,-0.06150285594986582
+SDN,Sudan,Low income,Eastern Mediterranean Region,-2.4343523364027497,2.0626944905153617,0,Developing-country road profile,1,False,-0.06953491072239637
+SUR,Suriname,Upper middle income,Region of the Americas,-0.8870826592626129,-1.4187508884365285,2,Low-motorization mixed,1,False,-0.05636544815131095
+SWE,Sweden,High income,European Region,4.30078858924872,-2.1885072488367965,1,Rich-country car culture,1,False,-0.10549681939415323
+CHE,Switzerland,High income,European Region,3.66099822472639,-1.6841720467739867,1,Rich-country car culture,1,False,-0.09444865617460718
+SYR,Syrian Arab Republic,Low income,Eastern Mediterranean Region,-2.8276568168165896,1.6158070836692728,0,Developing-country road profile,1,False,-0.09034623642805123
+TJK,Tajikistan,Lower middle income,European Region,-2.0338037345790383,-0.26790470302586894,0,Developing-country road profile,1,False,-0.11883529219341449
+THA,Thailand,Upper middle income,South-East Asia Region,1.0384903842921394,5.364582845845814,0,Developing-country road profile,-1,True,0.023724113533851066
+TLS,Timor-Leste,Lower middle income,South-East Asia Region,-2.3580793827032713,-2.3131520751855117,2,Low-motorization mixed,1,False,-0.08182842284159159
+TGO,Togo,Low income,African Region,-3.6465109912861338,-1.0608020180087836,2,Low-motorization mixed,1,False,-0.07511292692825755
+TTO,Trinidad and Tobago,High income,Region of the Americas,0.6851744399994765,-1.7799588856467905,3,Atypical reporting,1,False,-0.05601671404133485
+TUN,Tunisia,Lower middle income,Eastern Mediterranean Region,-0.027525621358066316,0.0052060498452365525,0,Developing-country road profile,1,False,-0.10355348003996262
+TUR,Türkiye,Upper middle income,European Region,3.388259434958471,0.6297389645342037,1,Rich-country car culture,1,False,-0.10488267943221008
+UGA,Uganda,Low income,African Region,-0.36142772765267894,0.21437702237720185,0,Developing-country road profile,1,False,-0.12418946065257847
+ARE,United Arab Emirates,High income,Eastern Mediterranean Region,1.7854880152384167,-0.012843226979371727,1,Rich-country car culture,1,False,-0.09147482307504251
+GBR,United Kingdom of Great Britain and Northern Ireland,High income,European Region,4.244780547489528,-0.4591709212684968,1,Rich-country car culture,1,False,-0.09825443141455581
+TZA,United Republic of Tanzania,Lower middle income,African Region,-2.5151973248442667,-1.0434013536469702,2,Low-motorization mixed,1,False,-0.07514638613485264
+USA,United States of America,High income,Region of the Americas,3.3545240935727505,3.0745050179327773,1,Rich-country car culture,-1,True,0.018451649616365584
+URY,Uruguay,High income,Region of the Americas,1.9146088605005276,-0.23430787259661412,1,Rich-country car culture,1,False,-0.10814056966754149
+UZB,Uzbekistan,Lower middle income,European Region,-0.7222764301830797,0.36182344920026815,0,Developing-country road profile,1,False,-0.09457150559367478
+VEN,Venezuela (Bolivarian Republic of),,Region of the Americas,-1.6390910834162766,2.293325489529372,0,Developing-country road profile,1,False,-0.10380274324526828
+VNM,Viet Nam,Lower middle income,Western Pacific Region,0.7339638886535206,2.504562403466597,0,Developing-country road profile,1,False,-0.037377869154953225
+YEM,Yemen,Low income,Eastern Mediterranean Region,-2.4558762271939734,2.11620999794313,0,Developing-country road profile,1,False,-0.11953746078778527
+ZMB,Zambia,Low income,African Region,-2.4409319304039845,-1.2646434204819992,2,Low-motorization mixed,1,False,-0.04872145987241544
+ZWE,Zimbabwe,Lower middle income,African Region,-0.048294482612761695,2.4135320650637664,0,Developing-country road profile,1,False,-0.06138286142392413
