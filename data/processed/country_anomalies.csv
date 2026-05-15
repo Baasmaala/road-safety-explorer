@@ -1,0 +1,10 @@
+ISO_3 country name,Country name,Income group,WHO Region,PC1,PC2,Cluster,Cluster_name,anomaly_label,is_anomaly,anomaly_score
+NIU,Niue,,Western Pacific Region,-0.9704679047453717,-1.1532689590027432,2,Low-motorization mixed,-1,True,0.07348086921709585
+COK,Cook Islands,,Western Pacific Region,-4.723046183810691,-3.7461224232969927,2,Low-motorization mixed,-1,True,0.047524983518720254
+CYP,Cyprus,High income,European Region,-2.2184713716325426,-6.861774064071808,2,Low-motorization mixed,-1,True,0.027838693985484775
+THA,Thailand,Upper middle income,South-East Asia Region,1.0384903842921394,5.364582845845814,0,Developing-country road profile,-1,True,0.023724113533851066
+GEO,Georgia,Upper middle income,European Region,-5.22263204266458,-5.792423643650123,2,Low-motorization mixed,-1,True,0.022463702059996593
+USA,United States of America,High income,Region of the Americas,3.3545240935727505,3.0745050179327773,1,Rich-country car culture,-1,True,0.018451649616365584
+VGB,British Virgin Islands,High income,Region of the Americas,-1.6296175620006654,-0.5335457544673975,2,Low-motorization mixed,-1,True,0.004263579489655833
+MEX,Mexico,Upper middle income,Region of the Americas,2.233563776751606,3.4700211265713192,0,Developing-country road profile,-1,True,0.0033556727313537316
+MDV,Maldives,Upper middle income,South-East Asia Region,-0.4566786623667568,-1.8437855596747026,2,Low-motorization mixed,-1,True,5.1839484587534734e-05
