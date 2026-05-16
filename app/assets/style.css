@@ -1,0 +1,623 @@
+/* ============================================================
+   GLOBAL ROAD SAFETY EXPLORER — BOLD MODERNIST THEME
+   Palette: ink #0A0A0A · cream #F4F1EA · lime #C6FF3D
+   Type: Space Grotesk (display) · Inter (body) · JetBrains Mono (meta)
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Inter:wght@400;500;600&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&display=swap');
+
+:root {
+    --ink: #0A0A0A;
+    --ink-soft: #1A1A1A;
+    --ink-mute: #4A4A48;
+    --ink-faint: #8A8880;
+    --cream: #F4F1EA;
+    --cream-deep: #ECE7DC;
+    --paper: #FFFFFF;
+    --lime: #C6FF3D;
+    --lime-deep: #A8E020;
+    --rule: rgba(10, 10, 10, 0.12);
+    --rule-strong: rgba(10, 10, 10, 0.85);
+    --font-display: 'Space Grotesk', -apple-system, sans-serif;
+    --font-serif: 'Instrument Serif', Georgia, serif;
+    --font-body: 'Inter', -apple-system, sans-serif;
+    --font-mono: 'JetBrains Mono', 'SF Mono', monospace;
+}
+
+/* ============================================================
+   STREAMLIT RESETS — kill the default chrome
+   ============================================================ */
+
+html, body, [class*="css"] {
+    font-family: var(--font-body) !important;
+    color: var(--ink) !important;
+    background: var(--cream) !important;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.stApp {
+    background: var(--cream) !important;
+}
+
+/* Hide Streamlit's default header/footer/menu */
+header[data-testid="stHeader"] { display: none !important; }
+footer { display: none !important; }
+#MainMenu { display: none !important; }
+.stDeployButton { display: none !important; }
+[data-testid="stToolbar"] { display: none !important; }
+[data-testid="stDecoration"] { display: none !important; }
+
+/* Sidebar styling — keep it minimal and modernist */
+section[data-testid="stSidebar"] {
+    background: var(--ink) !important;
+    border-right: none !important;
+}
+section[data-testid="stSidebar"] * {
+    color: var(--cream) !important;
+}
+section[data-testid="stSidebar"] .stRadio label {
+    font-family: var(--font-mono) !important;
+    font-size: 11px !important;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+/* Block container: kill streamlit padding, give us room to breathe */
+.block-container {
+    max-width: 1240px !important;
+    padding: 0 56px 80px 56px !important;
+    margin: 0 auto !important;
+}
+
+@media (max-width: 768px) {
+    .block-container {
+        padding: 0 24px 60px 24px !important;
+    }
+}
+
+/* ============================================================
+   TYPOGRAPHY SYSTEM
+   ============================================================ */
+
+.eyebrow {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--ink-mute);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.eyebrow .marker {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    background: var(--ink);
+}
+
+.eyebrow.lime .marker {
+    background: var(--lime);
+    box-shadow: 0 0 0 2px var(--ink);
+}
+
+.display-xl {
+    font-family: var(--font-display);
+    font-size: clamp(48px, 7vw, 92px);
+    font-weight: 500;
+    line-height: 0.92;
+    letter-spacing: -0.035em;
+    color: var(--ink);
+    margin: 0;
+}
+
+.display-xl .accent {
+    font-family: var(--font-serif);
+    font-style: italic;
+    font-weight: 400;
+    letter-spacing: -0.02em;
+}
+
+.display-xl .lime-mark {
+    background: var(--lime);
+    padding: 0 0.15em;
+    box-decoration-break: clone;
+    -webkit-box-decoration-break: clone;
+}
+
+.display-lg {
+    font-family: var(--font-display);
+    font-size: clamp(36px, 4.5vw, 56px);
+    font-weight: 500;
+    line-height: 0.98;
+    letter-spacing: -0.025em;
+    color: var(--ink);
+    margin: 0;
+}
+
+.lede {
+    font-family: var(--font-body);
+    font-size: clamp(16px, 1.4vw, 19px);
+    line-height: 1.55;
+    color: var(--ink-mute);
+    max-width: 600px;
+    margin: 0;
+    font-weight: 400;
+}
+
+/* ============================================================
+   TOP META BAR
+   ============================================================ */
+
+.topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 0;
+    border-bottom: 1px solid var(--rule);
+    font-family: var(--font-mono);
+    font-size: 11px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--ink-mute);
+}
+
+.topbar .brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--ink);
+    font-weight: 500;
+}
+
+.topbar .brand .dot {
+    width: 10px;
+    height: 10px;
+    background: var(--lime);
+    border: 1.5px solid var(--ink);
+}
+
+/* ============================================================
+   HERO
+   ============================================================ */
+
+.hero {
+    padding: 80px 0 72px;
+    border-bottom: 1px solid var(--rule);
+    position: relative;
+}
+
+.hero .lede {
+    margin-top: 32px;
+}
+
+.hero .cta-row {
+    display: flex;
+    gap: 14px;
+    margin-top: 44px;
+    flex-wrap: wrap;
+}
+
+.cta-primary {
+    background: var(--ink);
+    color: var(--cream);
+    border: 1.5px solid var(--ink);
+    padding: 16px 26px;
+    font-family: var(--font-body);
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: -0.005em;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+.cta-primary::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: var(--lime);
+    transform: translateX(-100%);
+    transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 0;
+}
+
+.cta-primary > * { position: relative; z-index: 1; }
+
+.cta-primary:hover {
+    color: var(--ink);
+}
+
+.cta-primary:hover::before {
+    transform: translateX(0);
+}
+
+.cta-primary .arrow {
+    transition: transform 0.25s ease;
+    font-family: var(--font-mono);
+}
+
+.cta-primary:hover .arrow {
+    transform: translateX(4px);
+}
+
+.cta-secondary {
+    background: transparent;
+    color: var(--ink);
+    border: 1.5px solid var(--ink);
+    padding: 16px 26px;
+    font-family: var(--font-body);
+    font-size: 14px;
+    font-weight: 500;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    cursor: pointer;
+}
+
+.cta-secondary:hover {
+    background: var(--ink);
+    color: var(--cream);
+}
+
+/* ============================================================
+   TYPING CURSOR + REVEAL ANIMATIONS
+   ============================================================ */
+
+.typed {
+    display: inline-block;
+}
+
+.cursor {
+    display: inline-block;
+    width: 0.55em;
+    height: 0.85em;
+    background: var(--lime);
+    vertical-align: -0.05em;
+    margin-left: 0.05em;
+    animation: blink 0.9s steps(2) infinite;
+}
+
+.cursor.done {
+    animation: blink 0.9s steps(2) infinite;
+    opacity: 0.6;
+}
+
+@keyframes blink {
+    0%, 50% { opacity: 1; }
+    51%, 100% { opacity: 0; }
+}
+
+.fade-up {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.7s ease, transform 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.fade-up.in {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ============================================================
+   STAT STRIP
+   ============================================================ */
+
+.stat-strip {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    border-bottom: 1px solid var(--rule);
+}
+
+.stat-cell {
+    padding: 36px 24px 36px 0;
+    border-right: 1px solid var(--rule);
+    position: relative;
+}
+
+.stat-cell:first-child { padding-left: 0; }
+.stat-cell:last-child { border-right: none; padding-right: 0; }
+.stat-cell:not(:first-child) { padding-left: 28px; }
+
+.stat-num {
+    font-family: var(--font-display);
+    font-size: clamp(40px, 4.5vw, 56px);
+    font-weight: 500;
+    line-height: 1;
+    letter-spacing: -0.025em;
+    color: var(--ink);
+}
+
+.stat-num .unit {
+    font-size: 0.5em;
+    color: var(--ink-faint);
+    margin-left: 2px;
+    font-weight: 400;
+}
+
+.stat-label {
+    font-family: var(--font-mono);
+    font-size: 10px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--ink-mute);
+    margin-top: 12px;
+}
+
+@media (max-width: 768px) {
+    .stat-strip { grid-template-columns: repeat(2, 1fr); }
+    .stat-cell:nth-child(2) { border-right: none; padding-right: 0; }
+    .stat-cell:nth-child(3) { padding-left: 0; border-bottom: 1px solid var(--rule); }
+    .stat-cell:nth-child(1), .stat-cell:nth-child(2) { border-bottom: 1px solid var(--rule); }
+}
+
+/* ============================================================
+   SECTION HEADER
+   ============================================================ */
+
+.section-head {
+    padding: 80px 0 48px;
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 24px;
+}
+
+.section-head .index {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--ink-mute);
+}
+
+/* ============================================================
+   FOUR-WAY GRID — the hover stars here
+   ============================================================ */
+
+.ways-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border-top: 1.5px solid var(--ink);
+    border-left: 1.5px solid var(--ink);
+}
+
+@media (max-width: 768px) {
+    .ways-grid { grid-template-columns: 1fr; }
+}
+
+.way-card {
+    position: relative;
+    padding: 40px 36px;
+    border-right: 1.5px solid var(--ink);
+    border-bottom: 1.5px solid var(--ink);
+    cursor: pointer;
+    overflow: hidden;
+    min-height: 280px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: var(--cream);
+    transition: color 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Lime wash from the left */
+.way-card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: var(--lime);
+    transform: translateX(-101%);
+    transition: transform 0.45s cubic-bezier(0.65, 0, 0.35, 1);
+    z-index: 0;
+}
+
+.way-card > * { position: relative; z-index: 1; }
+
+.way-card:hover::before {
+    transform: translateX(0);
+}
+
+.way-card:hover .card-num {
+    transform: scale(1.15);
+}
+
+.way-card:hover .card-arrow {
+    transform: translateX(6px);
+}
+
+.way-card:hover .card-shape {
+    transform: rotate(45deg) scale(1.1);
+}
+
+.card-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.card-num {
+    font-family: var(--font-display);
+    font-size: 64px;
+    font-weight: 500;
+    line-height: 0.9;
+    letter-spacing: -0.04em;
+    color: var(--ink);
+    transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+    transform-origin: bottom left;
+}
+
+.card-shape {
+    width: 22px;
+    height: 22px;
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.card-shape svg {
+    width: 100%;
+    height: 100%;
+    fill: none;
+    stroke: var(--ink);
+    stroke-width: 1.5;
+}
+
+.card-shape.filled svg { fill: var(--ink); }
+
+.card-body {
+    margin-top: auto;
+    padding-top: 40px;
+}
+
+.card-label {
+    font-family: var(--font-mono);
+    font-size: 10px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--ink-mute);
+    margin-bottom: 14px;
+}
+
+.card-title {
+    font-family: var(--font-display);
+    font-size: 28px;
+    font-weight: 500;
+    letter-spacing: -0.02em;
+    line-height: 1.08;
+    color: var(--ink);
+    margin: 0 0 12px;
+}
+
+.card-desc {
+    font-family: var(--font-body);
+    font-size: 14px;
+    line-height: 1.55;
+    color: var(--ink-mute);
+    margin: 0 0 22px;
+    max-width: 420px;
+}
+
+.card-arrow {
+    font-family: var(--font-mono);
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+    color: var(--ink);
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ============================================================
+   METHODOLOGY ACCORDION
+   ============================================================ */
+
+.method-row {
+    padding: 36px 0;
+    border-top: 1px solid var(--rule);
+    margin-top: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 24px;
+}
+
+.method-title {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.method-title .square {
+    width: 12px;
+    height: 12px;
+    background: var(--ink);
+}
+
+.method-title .label {
+    font-family: var(--font-display);
+    font-size: 20px;
+    font-weight: 500;
+    letter-spacing: -0.015em;
+}
+
+.method-title .sub {
+    font-family: var(--font-body);
+    font-size: 15px;
+    color: var(--ink-mute);
+}
+
+/* ============================================================
+   FOOTER STRIP
+   ============================================================ */
+
+.footer-strip {
+    margin-top: 80px;
+    padding: 32px 0;
+    border-top: 1.5px solid var(--ink);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 16px;
+    font-family: var(--font-mono);
+    font-size: 10px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--ink-mute);
+}
+
+.footer-strip .team {
+    color: var(--ink);
+    font-weight: 500;
+}
+
+/* ============================================================
+   HIDE STREAMLIT MARKDOWN ARTIFACTS
+   ============================================================ */
+
+.stMarkdown p:empty { display: none; }
+[data-testid="stMarkdownContainer"] > p:empty { display: none; }
+
+/* Selection color */
+::selection {
+    background: var(--lime);
+    color: var(--ink);
+}
+.cta-primary,
+.cta-secondary {
+    border: none;
+    outline: none;
+}
+html, body {
+    pointer-events: auto;
+}
+
+a, button {
+    pointer-events: auto !important;
+    position: relative;
+    z-index: 9999;
+}
+.cta-primary,
+.cta-secondary {
+    cursor: pointer;
+}
+
+.cursor,
+.typed,
+.hero-overlay,
+.noise,
+.grain {
+    pointer-events: none;
+}

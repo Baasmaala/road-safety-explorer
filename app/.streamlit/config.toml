@@ -1,0 +1,18 @@
+[theme]
+# Bold modernist palette: near-black + off-white + electric lime accent
+base = "light"
+primaryColor = "#C6FF3D"
+backgroundColor = "#F4F1EA"
+secondaryBackgroundColor = "#FFFFFF"
+textColor = "#0A0A0A"
+font = "sans serif"
+
+[server]
+runOnSave = true
+headless = false
+
+[browser]
+gatherUsageStats = false
+
+[ui]
+hideTopBar = false
