@@ -1,12 +1,12 @@
 """
 Page 2 — Compare
 Radar chart comparison: Palestine vs. up to 4 peer countries across 27
-indicators, grouped into 6 readable themes.
+measurements, grouped into 6 readable themes.
 
-Story: a 27-axis radar is unreadable, so we group the indicators into
+Story: a 27-axis radar is unreadable, so we group the measurements into
 six WHO-style themes (Legislation, Enforcement, Infrastructure, Vehicle
 safety, Post-crash, Data quality). Each theme score is the mean of its
-indicators, normalized 0–1 across all 171 countries — so "1.0 on
+measurements, scored 0 to 1 across all 171 countries — so "1.0 on
 Legislation" means strongest legislative coverage globally.
 
 Inputs:
@@ -115,9 +115,9 @@ def name_of(iso3: str) -> str:
 
 
 # ============================================================
-# THEME GROUPING — match indicator names by keyword
-# Each theme's score is the mean of its matched indicators
-# (after 0–1 normalization).
+# THEME GROUPING — match measurement names by keyword
+# Each theme's score is the mean of its matched measurements
+# (after 0–1 scaling).
 # ============================================================
 THEME_KEYWORDS = {
     "Legislation": [
@@ -148,7 +148,7 @@ THEME_KEYWORDS = {
 
 
 def classify_indicator(col_name: str) -> str | None:
-    """Map an indicator column to one of the six themes, or None if unmatched."""
+    """Map a measurement column to one of the six themes, or None if unmatched."""
     lower = col_name.lower()
     for theme, kws in THEME_KEYWORDS.items():
         for kw in kws:
@@ -285,7 +285,7 @@ clusters_df, features_df = load_data()
 df = clusters_df.merge(features_df, on="ISO", how="left")
 df["Country"] = df["ISO"].map(name_of)
 
-# Identify indicator columns
+# Identify measurement columns
 NON_INDICATOR = {"ISO", "Cluster", "Cluster_name", "Country", "Country name", "Entity", "Name"}
 indicator_cols = [
     c for c in df.columns
@@ -295,7 +295,7 @@ indicator_cols = [
 # ============================================================
 # BUILD THE THEME SCORES
 # ============================================================
-# 1. Min-max normalize each indicator to 0–1 across all 171 countries
+# 1. Scale each measurement to 0–1 across all 171 countries
 normalized = df[indicator_cols].copy()
 for col in indicator_cols:
     col_min = normalized[col].min(skipna=True)
@@ -305,7 +305,7 @@ for col in indicator_cols:
     else:
         normalized[col] = 0.0
 
-# 2. Classify each indicator into a theme
+# 2. Classify each measurement into a theme
 theme_to_indicators = {theme: [] for theme in THEME_KEYWORDS}
 unclassified = []
 for col in indicator_cols:
@@ -336,9 +336,9 @@ st.markdown(
     <h1 class="page-title">Palestine, <span class="accent">in profile.</span></h1>
     <p class="page-lede">
         Compare any country's road-safety profile against up to four peers
-        across six themes. Each axis is normalized 0–1 against every other
-        country in the WHO dataset — so a longer reach on an axis means
-        stronger performance globally.
+        across six themes. Each axis is scored 0 (lowest globally) to 1
+        (highest globally) — so a longer reach on an axis means stronger
+        performance compared to every other country in the dataset.
     </p>
     """,
     unsafe_allow_html=True,
@@ -383,13 +383,13 @@ st.markdown(
     unsafe_allow_html=True,
 )
 
-# Note about normalization
+# Note about scoring
 st.markdown(
     """
     <div class="note-box">
         <strong>Reading the chart:</strong> each axis is the country's
-        normalized score (0–1) on that theme, where 1 means top globally
-        and 0 means bottom. Themes are averages of related WHO indicators.
+        score on that theme — 0 means lowest globally, 1 means highest
+        globally. Themes are averages of related road-safety measurements.
     </div>
     """,
     unsafe_allow_html=True,
@@ -402,7 +402,7 @@ theme_axes = list(theme_to_indicators.keys())
 
 fig = go.Figure()
 
-# Color logic: anchor = lime, peers = ink shades / cluster colors
+# Color logic: anchor = lime, peers = ink shades / group colors
 PEER_PALETTE = [
     COLORS["ink"],
     COLORS["ink_mute"],
@@ -493,7 +493,7 @@ st.markdown(
     unsafe_allow_html=True,
 )
 st.markdown(
-    '<div class="sub-eyebrow">Normalized 0–1 against all 171 countries</div>',
+    '<div class="sub-eyebrow">Scored 0 (lowest globally) to 1 (highest globally), across all 171 countries</div>',
     unsafe_allow_html=True,
 )
 
@@ -503,7 +503,7 @@ for country in selected_countries:
     if row.empty:
         continue
     row = row.iloc[0]
-    table_row = {"Country": country, "Cluster": row.get("Cluster_name", "—")}
+    table_row = {"Country": country, "Group": row.get("Cluster_name", "—")}
     for t in theme_axes:
         v = row[t]
         table_row[t] = f"{v:.2f}" if pd.notna(v) else "—"
@@ -518,9 +518,9 @@ st.dataframe(
 # ============================================================
 # WHAT'S IN EACH THEME (expander)
 # ============================================================
-with st.expander("How themes are built (which indicators go into each)"):
+with st.expander("How themes are built (which measurements go into each)"):
     for theme, cols in theme_to_indicators.items():
-        st.markdown(f"**{theme}** ({len(cols)} indicators)")
+        st.markdown(f"**{theme}** ({len(cols)} measurements)")
         for c in cols:
             st.markdown(f"- {c}")
     if unclassified:
@@ -529,14 +529,14 @@ with st.expander("How themes are built (which indicators go into each)"):
             st.markdown(f"- {c}")
 
 # ============================================================
-# FOOTER NOTE
+# FOOTER NOTE — technical methodology stays here only
 # ============================================================
 st.markdown(
     f"""
     <div style="margin-top:60px; padding-top:24px; border-top:1px solid {COLORS['rule']};
                 font-family:{FONTS['mono']}; font-size:10px; letter-spacing:0.12em;
                 text-transform:uppercase; color:{COLORS['ink_mute']};">
-        WHO Global Status Report 2023 &middot; 6 themes &middot; 27 normalized indicators &middot; 171 countries
+        WHO Global Status Report 2023 &middot; 6 themes &middot; 27 min-max normalized indicators &middot; 171 countries
     </div>
     """,
     unsafe_allow_html=True,

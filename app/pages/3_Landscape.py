@@ -1,17 +1,17 @@
 """
 Page 3 — Landscape
-PCA scatter of all countries colored by cluster, with anomalies styled
+2D scatter of all countries colored by group, with unusual countries styled
 distinctly (diamond + lime ring) and Palestine starred.
 
-Story: clustering groups countries into 4 profiles; PCA flattens the
-27-feature space into 2D so we can see the shape of those groups. Isolation
-Forest then flags ~5% of countries as anomalous — countries whose indicator
-patterns don't fit any cluster cleanly. Pick any country below to see
+Story: grouping organizes countries into 4 road-safety profiles; a 2D
+projection flattens the 27-measurement space so we can see the shape of
+those groups. Countries flagged as unusual — those whose patterns don't fit
+any group cleanly — are shown as diamonds. Pick any country below to see
 exactly where it sits.
 
 Inputs:
-    data/processed/country_pca.csv        (full 171 countries, PCA + cluster)
-    data/processed/country_anomalies.csv  (subset: flagged anomalies)
+    data/processed/country_pca.csv        (full 171 countries, 2D + group)
+    data/processed/country_anomalies.csv  (subset: flagged unusual countries)
 """
 
 import sys
@@ -205,10 +205,11 @@ st.markdown(
     <div class="eyebrow"><span class="marker"></span><span>03 / Landscape</span></div>
     <h1 class="page-title">The space of <span class="accent">countries.</span></h1>
     <p class="page-lede">
-        PCA flattens 27 road-safety indicators into two dimensions. Each dot
-        is a country, colored by its cluster. Diamonds with a lime ring are
-        anomalies — countries that don't fit cleanly into any group. Palestine
-        is starred.
+        All 171 countries placed on a single chart, with similar countries
+        sitting close together. Each dot is a country, colored by its group.
+        Diamonds with a lime ring are unusual countries — flagged automatically
+        because their road-safety patterns don't fit cleanly into any group.
+        Palestine is starred.
     </p>
     """,
     unsafe_allow_html=True,
@@ -219,19 +220,19 @@ st.markdown(
 # ============================================================
 fig = go.Figure()
 
-# One trace per cluster — only NON-anomalies, as circles
+# One trace per group — only NON-anomalies, as circles
 for cluster_id in sorted(pca_df["Cluster"].dropna().unique()):
     cid = int(cluster_id)
     sub = pca_df[(pca_df["Cluster"] == cid) & (~pca_df["is_anomaly"])]
     sub = sub[sub["Country"] != "Palestine"]  # Palestine drawn separately
-    cluster_label = CLUSTER_NAMES.get(cid, f"Cluster {cid}")
+    cluster_label = CLUSTER_NAMES.get(cid, f"Group {cid}")
 
     fig.add_trace(
         go.Scatter(
             x=sub["PC1"],
             y=sub["PC2"],
             mode="markers",
-            name=f"{cid} / {cluster_label}",
+            name=f"{cid} — {cluster_label}",
             marker=dict(
                 size=11,
                 color=CLUSTER_COLORS.get(cid, COLORS["ink_mute"]),
@@ -243,16 +244,16 @@ for cluster_id in sorted(pca_df["Cluster"].dropna().unique()):
             hovertemplate=(
                 "<b>%{customdata[0]}</b><br>"
                 "%{customdata[1]}<br>"
-                "PC1: %{x:.2f}  &middot;  PC2: %{y:.2f}"
+                "Position: %{x:.2f}, %{y:.2f}"
                 "<extra></extra>"
             ),
         )
     )
 
-# Anomaly trace — diamonds with lime ring, all clusters merged into one legend entry
+# Unusual-countries trace — diamonds with lime ring, merged into one legend entry
 anom_in_pca = pca_df[pca_df["is_anomaly"] & (pca_df["Country"] != "Palestine")]
 if not anom_in_pca.empty:
-    # color fill by their cluster, but with a lime ring
+    # color fill by their group, but with a lime ring
     fill_colors = [
         CLUSTER_COLORS.get(int(c), COLORS["ink_mute"])
         for c in anom_in_pca["Cluster"]
@@ -262,7 +263,7 @@ if not anom_in_pca.empty:
             x=anom_in_pca["PC1"],
             y=anom_in_pca["PC2"],
             mode="markers",
-            name="Anomaly",
+            name="Unusual country",
             marker=dict(
                 size=15,
                 color=fill_colors,
@@ -273,9 +274,9 @@ if not anom_in_pca.empty:
             hovertemplate=(
                 "<b>%{customdata[0]}</b><br>"
                 "%{customdata[1]}<br>"
-                "PC1: %{x:.2f}  &middot;  PC2: %{y:.2f}<br>"
-                "Anomaly score: %{customdata[2]:.3f}"
-                "<extra>Anomaly</extra>"
+                "Position: %{x:.2f}, %{y:.2f}<br>"
+                "Unusualness score: %{customdata[2]:.3f}"
+                "<extra>Unusual country</extra>"
             ),
         )
     )
@@ -302,7 +303,7 @@ if not pal.empty:
             hovertemplate=(
                 "<b>Palestine</b><br>"
                 "%{customdata[0]}<br>"
-                "PC1: %{x:.2f}  &middot;  PC2: %{y:.2f}"
+                "Position: %{x:.2f}, %{y:.2f}"
                 "<extra></extra>"
             ),
         )
@@ -312,14 +313,14 @@ fig.update_layout(
     paper_bgcolor=COLORS["cream_deep"],
     plot_bgcolor=COLORS["cream_deep"],
     xaxis=dict(
-        title=dict(text="PC1", font=dict(family=FONTS["mono"], size=11, color=COLORS["ink_mute"])),
+        title=dict(text="Horizontal axis", font=dict(family=FONTS["mono"], size=11, color=COLORS["ink_mute"])),
         gridcolor=COLORS["rule"],
         zerolinecolor=COLORS["rule"],
         tickfont=dict(family=FONTS["mono"], size=10, color=COLORS["ink_mute"]),
         showline=True, linecolor=COLORS["ink"], linewidth=1,
     ),
     yaxis=dict(
-        title=dict(text="PC2", font=dict(family=FONTS["mono"], size=11, color=COLORS["ink_mute"])),
+        title=dict(text="Vertical axis", font=dict(family=FONTS["mono"], size=11, color=COLORS["ink_mute"])),
         gridcolor=COLORS["rule"],
         zerolinecolor=COLORS["rule"],
         tickfont=dict(family=FONTS["mono"], size=10, color=COLORS["ink_mute"]),
@@ -386,14 +387,14 @@ fig_inset.add_trace(
     )
 )
 
-# Same-cluster peers — colored
+# Same-group peers — colored
 peers = pca_df[(pca_df["Cluster"] == sel_cluster) & (pca_df["Country"] != selected)]
 fig_inset.add_trace(
     go.Scatter(
         x=peers["PC1"],
         y=peers["PC2"],
         mode="markers",
-        name=f"Same cluster ({sel_cluster_name})",
+        name=f"Same group ({sel_cluster_name})",
         marker=dict(
             size=10,
             color=CLUSTER_COLORS.get(sel_cluster, COLORS["ink_mute"]),
@@ -429,13 +430,13 @@ fig_inset.update_layout(
     paper_bgcolor=COLORS["cream_deep"],
     plot_bgcolor=COLORS["cream_deep"],
     xaxis=dict(
-        title=dict(text="PC1", font=dict(family=FONTS["mono"], size=10, color=COLORS["ink_mute"])),
+        title=dict(text="Horizontal axis", font=dict(family=FONTS["mono"], size=10, color=COLORS["ink_mute"])),
         gridcolor=COLORS["rule"], zerolinecolor=COLORS["rule"],
         tickfont=dict(family=FONTS["mono"], size=9, color=COLORS["ink_mute"]),
         showline=True, linecolor=COLORS["ink"], linewidth=1,
     ),
     yaxis=dict(
-        title=dict(text="PC2", font=dict(family=FONTS["mono"], size=10, color=COLORS["ink_mute"])),
+        title=dict(text="Vertical axis", font=dict(family=FONTS["mono"], size=10, color=COLORS["ink_mute"])),
         gridcolor=COLORS["rule"], zerolinecolor=COLORS["rule"],
         tickfont=dict(family=FONTS["mono"], size=9, color=COLORS["ink_mute"]),
         showline=True, linecolor=COLORS["ink"], linewidth=1,
@@ -456,7 +457,7 @@ with col_chart:
 
 with col_card:
     tag_class = "sub anomaly" if sel_is_anom else "sub"
-    tag_text = "Anomaly" if sel_is_anom else f"Cluster {sel_cluster} / {sel_cluster_name}"
+    tag_text = "Unusual country" if sel_is_anom else f"Group {sel_cluster} — {sel_cluster_name}"
 
     st.markdown(
         f"""
@@ -465,12 +466,12 @@ with col_card:
             <span class="{tag_class}">{tag_text}</span>
             <div class="meta">
                 <strong>ISO:</strong> {sel_iso}<br>
-                <strong>Cluster:</strong> {sel_cluster} &mdash; {sel_cluster_name}<br>
+                <strong>Group:</strong> {sel_cluster} &mdash; {sel_cluster_name}<br>
                 <strong>WHO region:</strong> {sel_region}<br>
                 <strong>Income group:</strong> {sel_income}<br>
-                <strong>PC1:</strong> {sel_pc1:+.2f}  &middot;  <strong>PC2:</strong> {sel_pc2:+.2f}<br>
-                <strong>Anomaly score:</strong> {sel_score:+.3f}
-                ({"flagged" if sel_is_anom else "not flagged"})
+                <strong>Position:</strong> {sel_pc1:+.2f}, {sel_pc2:+.2f}<br>
+                <strong>Unusualness score:</strong> {sel_score:+.3f}
+                ({"flagged as unusual" if sel_is_anom else "not flagged"})
             </div>
         </div>
         """,
@@ -478,19 +479,19 @@ with col_card:
     )
 
 # ============================================================
-# FULL ANOMALY LIST
+# FULL UNUSUAL-COUNTRY LIST
 # ============================================================
 st.markdown(
-    '<div class="eyebrow" style="margin-top:36px;"><span class="marker"></span><span>All anomalies</span></div>',
+    '<div class="eyebrow" style="margin-top:36px;"><span class="marker"></span><span>All unusual countries</span></div>',
     unsafe_allow_html=True,
 )
 st.markdown(
-    f'<div class="sub-eyebrow">{len(anom_df)} countries flagged by Isolation Forest &middot; '
-    'sorted by anomaly score (most anomalous first)</div>',
+    f'<div class="sub-eyebrow">{len(anom_df)} countries flagged automatically &middot; '
+    'sorted by unusualness score (most unusual first)</div>',
     unsafe_allow_html=True,
 )
 
-# Sort: more positive score = more anomalous (sklearn convention varies, but in
+# Sort: more positive score = more unusual (sklearn convention varies, but in
 # this file the flagged rows tend to have higher scores)
 anom_sorted = anom_df.sort_values("anomaly_score", ascending=False)
 
@@ -508,7 +509,7 @@ for _, ar in anom_sorted.iterrows():
 st.markdown("".join(rows_html), unsafe_allow_html=True)
 
 # ============================================================
-# FOOTER NOTE
+# FOOTER NOTE — technical methodology stays here only
 # ============================================================
 st.markdown(
     f"""

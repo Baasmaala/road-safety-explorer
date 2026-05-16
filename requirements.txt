@@ -1,0 +1,22 @@
+# Global Road Safety Explorer — Python dependencies
+# Tested with Python 3.10 and 3.11
+#
+# Install with:  pip install -r requirements.txt
+# Then run:      streamlit run app/app.py
+
+# Web app framework
+streamlit>=1.32
+
+# Data handling
+pandas>=2.0
+numpy>=1.24
+openpyxl>=3.1            # for reading the WHO .xlsx file
+
+# Visualization
+plotly>=5.18
+
+# Machine learning  (clustering, PCA, anomaly detection)
+scikit-learn>=1.3
+
+# Time-series forecasting  (ARIMA + Holt-Winters)
+statsmodels>=0.14
