@@ -1,0 +1,210 @@
+Entity,Code,Year,DeathRate,Fitted,Residual,Z_Score,Direction
+Afghanistan,AFG,1990,33.4668,0.0,33.4668,4.9699,above_trend
+Africa,,1990,28.5348,0.0,28.5348,5.0008,above_trend
+Albania,ALB,1990,12.0204,0.0,12.0204,4.9253,above_trend
+Algeria,DZA,1990,52.1684,0.0,52.1684,4.9931,above_trend
+American Samoa,ASM,1990,10.5594,0.0,10.5594,4.867,above_trend
+Andorra,AND,1990,14.6767,0.0,14.6767,4.8531,above_trend
+Angola,AGO,1990,42.7231,0.0,42.7231,4.9656,above_trend
+Antigua and Barbuda,ATG,1990,9.5949,0.0,9.5949,4.8311,above_trend
+Argentina,ARG,1990,13.3697,0.0,13.3697,4.9873,above_trend
+Armenia,ARM,1990,15.573,0.0,15.573,4.9485,above_trend
+Asia,,1990,19.1204,0.0,19.1204,5.0009,above_trend
+Australia,AUS,1990,16.1492,0.0,16.1492,4.9792,above_trend
+Austria,AUT,1990,18.4232,0.0,18.4232,4.9926,above_trend
+Azerbaijan,AZE,1990,15.298,0.0,15.298,4.8233,above_trend
+Bahamas,BHS,1990,22.246,0.0,22.246,4.5008,above_trend
+Bahamas,BHS,2003,14.052,24.8684,-10.8164,-2.3238,below_trend
+Bahrain,BHR,1990,22.1807,0.0,22.1807,4.9642,above_trend
+Bangladesh,BGD,1990,7.6416,0.0,7.6416,4.9705,above_trend
+Barbados,BRB,1990,13.4134,0.0,13.4134,4.9527,above_trend
+Belarus,BLR,1990,24.6869,0.0,24.6869,4.9148,above_trend
+Belgium,BEL,1990,20.9863,0.0,20.9863,4.9961,above_trend
+Belize,BLZ,1990,18.1281,0.0,18.1281,4.793,above_trend
+Benin,BEN,1990,21.151,0.0,21.151,4.9927,above_trend
+Bermuda,BMU,1990,21.0936,0.0,21.0936,4.9303,above_trend
+Bhutan,BTN,1990,14.1296,0.0,14.1296,4.9675,above_trend
+Bolivia,BOL,1990,27.7792,0.0,27.7792,4.9999,above_trend
+Bosnia and Herzegovina,BIH,1990,6.094,0.0,6.094,4.8529,above_trend
+Botswana,BWA,1990,20.983,0.0,20.983,4.9664,above_trend
+Brazil,BRA,1990,29.6879,0.0,29.6879,4.9942,above_trend
+Brunei,BRN,1990,28.9895,0.0,28.9895,4.986,above_trend
+Bulgaria,BGR,1990,16.9994,0.0,16.9994,4.9585,above_trend
+Burkina Faso,BFA,1990,29.1112,0.0,29.1112,4.9909,above_trend
+Burundi,BDI,1990,24.7842,0.0,24.7842,4.9922,above_trend
+Cambodia,KHM,1990,28.143,0.0,28.143,4.9987,above_trend
+Cameroon,CMR,1990,20.662,0.0,20.662,4.9826,above_trend
+Canada,CAN,1990,15.5475,0.0,15.5475,4.9944,above_trend
+Cape Verde,CPV,1990,7.1016,0.0,7.1016,4.957,above_trend
+Central African Republic,CAF,1990,51.2338,0.0,51.2338,4.9712,above_trend
+Chad,TCD,1990,18.7314,0.0,18.7314,4.9886,above_trend
+Chile,CHL,1990,15.8498,0.0,15.8498,4.9874,above_trend
+China,CHN,1990,19.5855,0.0,19.5855,4.9868,above_trend
+Colombia,COL,1990,20.6419,0.0,20.6419,4.9348,above_trend
+Comoros,COM,1990,24.2956,0.0,24.2956,4.8116,above_trend
+Congo,COG,1990,39.9705,0.0,39.9705,4.9315,above_trend
+Cook Islands,COK,1990,32.9761,0.0,32.9761,4.8802,above_trend
+Costa Rica,CRI,1990,16.4132,0.0,16.4132,4.8871,above_trend
+Cote d'Ivoire,CIV,1990,16.1092,0.0,16.1092,4.9949,above_trend
+Croatia,HRV,1990,21.0411,0.0,21.0411,4.9631,above_trend
+Cuba,CUB,1990,23.7803,0.0,23.7803,4.9812,above_trend
+Cyprus,CYP,1990,22.5667,0.0,22.5667,4.9882,above_trend
+Czechia,CZE,1990,14.7666,0.0,14.7666,4.9662,above_trend
+Democratic Republic of Congo,COD,1990,58.341,0.0,58.341,4.9939,above_trend
+Denmark,DNK,1990,14.8022,0.0,14.8022,4.988,above_trend
+Djibouti,DJI,1990,10.5015,0.0,10.5015,4.8815,above_trend
+Dominica,DMA,1990,21.3002,0.0,21.3002,4.971,above_trend
+Dominican Republic,DOM,1990,21.2659,0.0,21.2659,4.9776,above_trend
+Ecuador,ECU,1990,24.3184,0.0,24.3184,4.9132,above_trend
+Egypt,EGY,1990,49.9158,0.0,49.9158,4.9733,above_trend
+El Salvador,SLV,1990,27.2102,0.0,27.2102,4.8787,above_trend
+Equatorial Guinea,GNQ,1990,43.1787,0.0,43.1787,4.9754,above_trend
+Eritrea,ERI,1990,24.6608,0.0,24.6608,4.9429,above_trend
+Estonia,EST,1990,27.4078,0.0,27.4078,4.806,above_trend
+Eswatini,SWZ,1990,24.0752,0.0,24.0752,4.9703,above_trend
+Ethiopia,ETH,1990,23.4631,0.0,23.4631,4.9978,above_trend
+Europe,,1990,22.0479,0.0,22.0479,4.9861,above_trend
+Fiji,FJI,1990,13.0392,0.0,13.0392,4.969,above_trend
+Finland,FIN,1990,14.511,0.0,14.511,4.9902,above_trend
+France,FRA,1990,21.1482,0.0,21.1482,4.9933,above_trend
+Gabon,GAB,1990,35.3873,0.0,35.3873,4.9808,above_trend
+Gambia,GMB,1990,12.5576,0.0,12.5576,4.8486,above_trend
+Georgia,GEO,1990,24.2681,0.0,24.2681,4.9233,above_trend
+Germany,DEU,1990,15.6703,0.0,15.6703,4.9971,above_trend
+Ghana,GHA,1990,18.4861,0.0,18.4861,4.9897,above_trend
+Greece,GRC,1990,22.9807,0.0,22.9807,4.9886,above_trend
+Greenland,GRL,1990,8.9922,0.0,8.9922,4.7526,above_trend
+Grenada,GRD,1990,12.4574,0.0,12.4574,4.8333,above_trend
+Guam,GUM,1990,15.3281,0.0,15.3281,4.9779,above_trend
+Guatemala,GTM,1990,10.7731,0.0,10.7731,4.9342,above_trend
+Guinea,GIN,1990,22.2912,0.0,22.2912,4.9936,above_trend
+Guinea-Bissau,GNB,1990,40.3993,0.0,40.3993,4.9833,above_trend
+Guyana,GUY,1990,20.4492,0.0,20.4492,4.9282,above_trend
+Haiti,HTI,1990,15.1749,0.0,15.1749,4.9793,above_trend
+Honduras,HND,1990,14.8528,0.0,14.8528,4.991,above_trend
+Hungary,HUN,1990,22.4436,0.0,22.4436,4.9708,above_trend
+Iceland,ISL,1990,11.7627,0.0,11.7627,4.9762,above_trend
+India,IND,1990,14.8659,0.0,14.8659,4.9781,above_trend
+Indonesia,IDN,1990,27.1865,0.0,27.1865,4.9959,above_trend
+Iran,IRN,1990,54.4528,0.0,54.4528,4.9987,above_trend
+Iraq,IRQ,1990,21.1377,0.0,21.1377,4.9866,above_trend
+Ireland,IRL,1990,14.0136,0.0,14.0136,4.9837,above_trend
+Israel,ISR,1990,11.982,0.0,11.982,4.9724,above_trend
+Italy,ITA,1990,19.5098,0.0,19.5098,4.9957,above_trend
+Jamaica,JAM,1990,4.6696,0.0,4.6696,4.0858,above_trend
+Japan,JPN,1990,12.5248,0.0,12.5248,4.9978,above_trend
+Jordan,JOR,1990,19.0135,0.0,19.0135,4.9907,above_trend
+Kazakhstan,KAZ,1990,24.4997,0.0,24.4997,4.9534,above_trend
+Kenya,KEN,1990,8.2952,0.0,8.2952,4.9923,above_trend
+Kiribati,KIR,1990,19.3386,0.0,19.3386,4.9749,above_trend
+Kuwait,KWT,1990,19.424,0.0,19.424,4.6823,above_trend
+Kyrgyzstan,KGZ,1990,23.5314,0.0,23.5314,4.9588,above_trend
+Laos,LAO,1990,27.7799,0.0,27.7799,4.9995,above_trend
+Latvia,LVA,1990,35.0542,0.0,35.0542,4.8711,above_trend
+Lebanon,LBN,1990,13.8065,0.0,13.8065,4.9911,above_trend
+Lesotho,LSO,1990,27.3513,0.0,27.3513,4.9769,above_trend
+Liberia,LBR,1990,18.7387,0.0,18.7387,4.9525,above_trend
+Libya,LBY,1990,34.9587,0.0,34.9587,4.9681,above_trend
+Lithuania,LTU,1990,30.2216,0.0,30.2216,4.8712,above_trend
+Luxembourg,LUX,1990,21.2164,0.0,21.2164,4.9898,above_trend
+Madagascar,MDG,1990,20.0196,0.0,20.0196,4.9543,above_trend
+Malawi,MWI,1990,17.9382,0.0,17.9382,4.9974,above_trend
+Malaysia,MYS,1990,24.2099,0.0,24.2099,4.9312,above_trend
+Maldives,MDV,1990,9.8584,0.0,9.8584,4.9405,above_trend
+Mali,MLI,1990,20.4499,0.0,20.4499,4.9864,above_trend
+Malta,MLT,1990,7.4582,0.0,7.4582,4.9806,above_trend
+Marshall Islands,MHL,1990,19.0416,0.0,19.0416,4.9544,above_trend
+Mauritania,MRT,1990,42.0774,0.0,42.0774,4.9819,above_trend
+Mauritius,MUS,1990,14.4904,0.0,14.4904,4.9436,above_trend
+Mexico,MEX,1990,24.5809,0.0,24.5809,4.9923,above_trend
+Micronesia (country),FSM,1990,25.9595,0.0,25.9595,4.9902,above_trend
+Moldova,MDA,1990,26.8236,0.0,26.8236,4.9218,above_trend
+Monaco,MCO,1990,10.1926,0.0,10.1926,4.7776,above_trend
+Mongolia,MNG,1990,12.545,0.0,12.545,4.9274,above_trend
+Montenegro,MNE,1990,10.8942,0.0,10.8942,4.903,above_trend
+Morocco,MAR,1990,37.3557,0.0,37.3557,4.9435,above_trend
+Mozambique,MOZ,1990,20.5586,0.0,20.5586,4.9907,above_trend
+Myanmar,MMR,1990,29.9019,0.0,29.9019,4.9947,above_trend
+Namibia,NAM,1990,23.1698,0.0,23.1698,4.9551,above_trend
+Nauru,NRU,1990,31.559,0.0,31.559,4.5815,above_trend
+Nepal,NPL,1990,11.0709,0.0,11.0709,4.9986,above_trend
+Netherlands,NLD,1990,11.4664,0.0,11.4664,4.9863,above_trend
+New Zealand,NZL,1990,22.9241,0.0,22.9241,4.9813,above_trend
+Nicaragua,NIC,1990,12.8671,0.0,12.8671,4.9055,above_trend
+Niger,NER,1990,19.6347,0.0,19.6347,4.9789,above_trend
+Nigeria,NGA,1990,12.4269,0.0,12.4269,4.9984,above_trend
+North America,,1990,12.4591,0.0,12.4591,4.9949,above_trend
+North Korea,PRK,1990,32.755,0.0,32.755,5.0018,above_trend
+North Macedonia,MKD,1990,9.5681,0.0,9.5681,4.9343,above_trend
+Northern Mariana Islands,MNP,1990,24.0427,0.0,24.0427,4.8517,above_trend
+Norway,NOR,1990,11.631,0.0,11.631,4.9285,above_trend
+Oceania,,1990,5.5131,0.0,5.5131,4.9959,above_trend
+Oman,OMN,1990,88.4581,0.0,88.4581,4.9765,above_trend
+Pakistan,PAK,1990,7.3322,0.0,7.3322,4.9932,above_trend
+Palau,PLW,1990,19.9164,0.0,19.9164,4.711,above_trend
+Palestine,PSE,1990,14.9897,0.0,14.9897,4.9717,above_trend
+Panama,PAN,1990,20.5994,0.0,20.5994,4.9473,above_trend
+Papua New Guinea,PNG,1990,23.3327,0.0,23.3327,4.9927,above_trend
+Paraguay,PRY,1990,12.0045,0.0,12.0045,4.8724,above_trend
+Peru,PER,1990,17.1489,0.0,17.1489,4.9307,above_trend
+Philippines,PHL,1990,13.3775,0.0,13.3775,4.9923,above_trend
+Poland,POL,1990,22.0784,0.0,22.0784,4.9577,above_trend
+Portugal,PRT,1990,35.4712,0.0,35.4712,4.9852,above_trend
+Puerto Rico,PRI,1990,21.4506,0.0,21.4506,4.9527,above_trend
+Qatar,QAT,1990,41.9925,0.0,41.9925,4.9609,above_trend
+Romania,ROU,1990,19.9454,0.0,19.9454,4.9525,above_trend
+Russia,RUS,1990,26.637,0.0,26.637,4.8081,above_trend
+Rwanda,RWA,1990,33.311,0.0,33.311,4.8974,above_trend
+Saint Kitts and Nevis,KNA,1990,19.8708,0.0,19.8708,4.8888,above_trend
+Saint Lucia,LCA,1990,18.838,0.0,18.838,4.9613,above_trend
+Saint Vincent and the Grenadines,VCT,1990,11.1639,0.0,11.1639,4.8518,above_trend
+Samoa,WSM,1990,17.1993,0.0,17.1993,4.9901,above_trend
+San Marino,SMR,1990,12.4357,0.0,12.4357,5.0032,above_trend
+Sao Tome and Principe,STP,1990,12.5827,0.0,12.5827,4.8732,above_trend
+Saudi Arabia,SAU,1990,46.5203,0.0,46.5203,4.9908,above_trend
+Senegal,SEN,1990,16.3294,0.0,16.3294,4.8703,above_trend
+Serbia,SRB,1990,14.8881,0.0,14.8881,4.9518,above_trend
+Seychelles,SYC,1990,11.3359,0.0,11.3359,4.7407,above_trend
+Sierra Leone,SLE,1990,20.3252,0.0,20.3252,4.9889,above_trend
+Singapore,SGP,1990,9.1272,0.0,9.1272,4.9888,above_trend
+Slovakia,SVK,1990,19.6466,0.0,19.6466,4.9633,above_trend
+Slovenia,SVN,1990,23.9234,0.0,23.9234,4.9813,above_trend
+Solomon Islands,SLB,1990,26.6137,0.0,26.6137,4.997,above_trend
+Somalia,SOM,1990,19.5569,0.0,19.5569,4.9891,above_trend
+South Africa,ZAF,1990,51.9721,0.0,51.9721,4.8867,above_trend
+South Korea,KOR,1990,34.9594,0.0,34.9594,4.9876,above_trend
+South Sudan,SSD,1990,16.4767,0.0,16.4767,4.9485,above_trend
+Spain,ESP,1990,23.8148,0.0,23.8148,4.9928,above_trend
+Sri Lanka,LKA,1990,15.07,0.0,15.07,4.8306,above_trend
+Sudan,SDN,1990,33.8899,0.0,33.8899,5.0001,above_trend
+Suriname,SUR,1990,20.9789,0.0,20.9789,4.8952,above_trend
+Sweden,SWE,1990,10.9368,0.0,10.9368,4.993,above_trend
+Switzerland,CHE,1990,15.2866,0.0,15.2866,4.9901,above_trend
+Syria,SYR,1990,16.4308,0.0,16.4308,4.9766,above_trend
+Taiwan,TWN,1990,37.9471,0.0,37.9471,4.9869,above_trend
+Tajikistan,TJK,1990,13.1723,0.0,13.1723,4.9488,above_trend
+Tanzania,TZA,1990,14.8311,0.0,14.8311,4.996,above_trend
+Thailand,THA,1990,38.9493,0.0,38.9493,4.8635,above_trend
+Timor,TLS,1990,15.18,0.0,15.18,4.9255,above_trend
+Togo,TGO,1990,22.1232,0.0,22.1232,4.9951,above_trend
+Tonga,TON,1990,9.4668,0.0,9.4668,4.9262,above_trend
+Trinidad and Tobago,TTO,1990,15.3138,0.0,15.3138,4.852,above_trend
+Tunisia,TUN,1990,28.2074,0.0,28.2074,5.0003,above_trend
+Turkey,TUR,1990,15.9045,0.0,15.9045,4.9853,above_trend
+Turkmenistan,TKM,1990,16.6668,0.0,16.6668,4.9195,above_trend
+Tuvalu,TUV,1990,33.67,0.0,33.67,4.618,above_trend
+Uganda,UGA,1990,15.9671,0.0,15.9671,4.9745,above_trend
+Ukraine,UKR,1990,23.8831,0.0,23.8831,4.7377,above_trend
+United Arab Emirates,ARE,1990,42.2219,0.0,42.2219,4.958,above_trend
+United Kingdom,GBR,1990,10.197,0.0,10.197,4.9923,above_trend
+United States,USA,1990,19.4233,0.0,19.4233,4.9948,above_trend
+United States Virgin Islands,VIR,1990,18.3124,0.0,18.3124,4.9459,above_trend
+Uruguay,URY,1990,16.5616,0.0,16.5616,4.9661,above_trend
+Uzbekistan,UZB,1990,15.5454,0.0,15.5454,4.94,above_trend
+Vanuatu,VUT,1990,20.4673,0.0,20.4673,4.9596,above_trend
+Venezuela,VEN,1990,26.0026,0.0,26.0026,4.9554,above_trend
+Vietnam,VNM,1990,21.6065,0.0,21.6065,4.9626,above_trend
+World,OWID_WRL,1990,20.8992,0.0,20.8992,5.002,above_trend
+Yemen,YEM,1990,66.0803,0.0,66.0803,4.9856,above_trend
+Zambia,ZMB,1990,18.1414,0.0,18.1414,4.9966,above_trend
+Zimbabwe,ZWE,1990,18.7589,0.0,18.7589,4.9485,above_trend
