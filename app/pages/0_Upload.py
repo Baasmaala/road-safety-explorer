@@ -1,10 +1,10 @@
 """
 Page 0 — Upload
 Drop any country-level CSV. The pipeline detects whether it matches the WHO
-format (and uses the same cluster identities as the rest of the app) or
+format (and uses the same group identities as the rest of the app) or
 treats it as a generic dataset (runs Basmala's notebook function from
 scratch, labels as Group 1–4).
-Outputs: cleaning summary, cluster sizes, PCA landscape, results table,
+Outputs: cleaning summary, group sizes, 2D landscape, results table,
 download button.
 """
 
@@ -185,9 +185,9 @@ st.markdown(
     <h1 class="page-title">Bring your own <span class="accent">data.</span></h1>
     <p class="page-lede">
         Drop any country-level CSV. If it matches the WHO format, it gets
-        labelled against the same four cluster profiles as the rest of the
-        atlas. Otherwise, we run the same K-Means + PCA pipeline from
-        Basmala's notebook on whatever indicators you supply, grouping your
+        labelled against the same four road-safety profile groups as the
+        rest of the atlas. Otherwise, the same grouping pipeline runs
+        from scratch on whatever measurements you supply, sorting your
         countries into four data-driven groups.
     </p>
     """,
@@ -206,11 +206,11 @@ st.markdown(
             <li>A column holding country names. Common headers work
                 automatically: <code>Country</code>, <code>Country name</code>,
                 <code>Entity</code>, or <code>Name</code>.</li>
-            <li>The rest of the columns should be numeric indicators.
+            <li>The rest of the columns should be numeric measurements.
                 Non-numeric columns are dropped during cleaning.</li>
             <li>Columns with more than 50% missing values are dropped;
                 remaining gaps are filled with the column median. Constant
-                columns (zero variance) and severely skewed columns are
+                columns (no variation) and severely skewed columns are
                 also removed.</li>
             <li>Palestine listed under any WHO/UN variant
                 (e.g. "occupied Palestinian territory") is normalized to
@@ -271,7 +271,7 @@ labels_df = out["labels_df"]
 features = out["features"]
 country_col = out["country_col"]
 
-# PCA for the landscape scatter
+# 2D projection for the landscape scatter
 pca_out = project_to_2d(features)
 ev1, ev2 = pca_out["explained_variance"]
 
@@ -283,7 +283,7 @@ results["PC1"] = pca_out["PC1"]
 results["PC2"] = pca_out["PC2"]
 results.index.name = "Country"
 
-# Cluster sizes
+# Group sizes
 sizes = {int(c): int((labels_df["Cluster"] == c).sum()) for c in sorted(labels_df["Cluster"].unique())}
 
 # ============================================================
@@ -314,7 +314,7 @@ with c2:
 with c3:
     st.markdown(
         f"""<div class="info-card">
-            <div class="label">Indicators kept</div>
+            <div class="label">Measurements kept</div>
             <div class="value">{features.shape[1]}</div>
         </div>""",
         unsafe_allow_html=True,
@@ -339,19 +339,19 @@ if dropped_cols or constant_cols or outlier_cols:
             st.markdown(f"**Sparse columns dropped** ({len(dropped_cols)} — >50% missing): "
                         + ", ".join(f"`{c}`" for c in dropped_cols))
         if constant_cols:
-            st.markdown(f"**Constant columns dropped** ({len(constant_cols)} — zero variance): "
+            st.markdown(f"**Constant columns dropped** ({len(constant_cols)} — no variation): "
                         + ", ".join(f"`{c}`" for c in constant_cols))
         if outlier_cols:
-            st.markdown(f"**Skewed columns dropped** ({len(outlier_cols)} — skewness > 5): "
+            st.markdown(f"**Skewed columns dropped** ({len(outlier_cols)} — extremely uneven distribution): "
                         + ", ".join(f"`{c}`" for c in outlier_cols))
 
 # ============================================================
 # MODE TAG
 # ============================================================
 if format_mode == "who":
-    mode_label = "WHO format detected — using shared cluster identities"
+    mode_label = "WHO format detected — using shared group profiles"
 else:
-    mode_label = "Generic format — clusters fit from scratch (notebook pipeline)"
+    mode_label = "Generic format — groups built from scratch on your data"
 
 st.markdown(
     f'<span class="mode-tag">{mode_label}</span>',
@@ -359,15 +359,15 @@ st.markdown(
 )
 
 # ============================================================
-# CLUSTER LANDSCAPE
+# GROUP LANDSCAPE
 # ============================================================
 st.markdown(
-    '<div class="eyebrow" style="margin-top:12px;"><span class="marker"></span><span>Cluster landscape</span></div>',
+    '<div class="eyebrow" style="margin-top:12px;"><span class="marker"></span><span>Group landscape</span></div>',
     unsafe_allow_html=True,
 )
 st.markdown(
-    f'<div class="sub-eyebrow">PC1 explains {ev1:.1%} &middot; PC2 explains {ev2:.1%} '
-    f'&middot; total {ev1 + ev2:.1%}</div>',
+    f'<div class="sub-eyebrow">All countries placed on a single chart &middot; '
+    f'captures {ev1 + ev2:.1%} of the variation in your data</div>',
     unsafe_allow_html=True,
 )
 
@@ -381,7 +381,7 @@ for cid in sorted(results["Cluster"].unique()):
             x=sub["PC1"],
             y=sub["PC2"],
             mode="markers",
-            name=f"{int(cid)} / {cname}",
+            name=f"{int(cid)} — {cname}",
             marker=dict(
                 size=10,
                 color=CLUSTER_COLORS.get(int(cid), COLORS["ink_mute"]),
@@ -391,7 +391,7 @@ for cid in sorted(results["Cluster"].unique()):
             hovertemplate=(
                 "<b>%{customdata[0]}</b><br>"
                 f"{cname}<br>"
-                "PC1: %{x:.2f}<br>PC2: %{y:.2f}"
+                "Position: %{x:.2f}, %{y:.2f}"
                 "<extra></extra>"
             ),
         )
@@ -410,7 +410,7 @@ if "Palestine" in results.index:
             ),
             text=["Palestine"], textposition="top center",
             textfont=dict(family=FONTS["mono"], size=11, color=COLORS["ink"]),
-            hovertemplate="<b>Palestine</b><br>PC1: %{x:.2f}<br>PC2: %{y:.2f}<extra></extra>",
+            hovertemplate="<b>Palestine</b><br>Position: %{x:.2f}, %{y:.2f}<extra></extra>",
         )
     )
 
@@ -418,13 +418,13 @@ fig.update_layout(
     paper_bgcolor=COLORS["cream_deep"],
     plot_bgcolor=COLORS["cream_deep"],
     xaxis=dict(
-        title=dict(text="PC1", font=dict(family=FONTS["mono"], size=11, color=COLORS["ink_mute"])),
+        title=dict(text="Horizontal axis", font=dict(family=FONTS["mono"], size=11, color=COLORS["ink_mute"])),
         gridcolor=COLORS["rule"], zerolinecolor=COLORS["rule"],
         tickfont=dict(family=FONTS["mono"], size=10, color=COLORS["ink_mute"]),
         showline=True, linecolor=COLORS["ink"], linewidth=1,
     ),
     yaxis=dict(
-        title=dict(text="PC2", font=dict(family=FONTS["mono"], size=11, color=COLORS["ink_mute"])),
+        title=dict(text="Vertical axis", font=dict(family=FONTS["mono"], size=11, color=COLORS["ink_mute"])),
         gridcolor=COLORS["rule"], zerolinecolor=COLORS["rule"],
         tickfont=dict(family=FONTS["mono"], size=10, color=COLORS["ink_mute"]),
         showline=True, linecolor=COLORS["ink"], linewidth=1,
@@ -442,7 +442,7 @@ fig.update_layout(
 st.plotly_chart(fig, use_container_width=True, config={"displaylogo": False})
 
 # ============================================================
-# CLUSTER SUMMARY (sizes + sample members)
+# GROUP SUMMARY (sizes + sample members)
 # ============================================================
 st.markdown(
     '<div class="eyebrow" style="margin-top:36px;"><span class="marker"></span><span>Group breakdown</span></div>',
@@ -482,6 +482,12 @@ if "Country" not in display_table.columns:
 display_table["PC1"] = display_table["PC1"].round(3)
 display_table["PC2"] = display_table["PC2"].round(3)
 display_table = display_table[["Country", "Cluster_name", "Cluster", "PC1", "PC2"]]
+display_table = display_table.rename(columns={
+    "Cluster_name": "Group name",
+    "Cluster": "Group",
+    "PC1": "Horizontal",
+    "PC2": "Vertical",
+})
 
 st.dataframe(display_table, use_container_width=True, hide_index=True)
 
@@ -496,7 +502,7 @@ st.download_button(
 )
 
 # ============================================================
-# FOOTER NOTE
+# FOOTER NOTE — technical methodology stays here only
 # ============================================================
 st.markdown(
     f"""

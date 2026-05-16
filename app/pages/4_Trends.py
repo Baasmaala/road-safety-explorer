@@ -1,12 +1,12 @@
 """
 Page 4 — Trends
-Per-country fatality time series 1990–2019 with 3-year Holt-Winters
-forecast (with confidence band) and temporal anomalies flagged.
+Per-country fatality time series 1990–2019 with 3-year projection
+(with likely-range band) and unusual years flagged.
 
 Story: each country has its own fatality trajectory. Some climb, some fall,
-some swing wildly. The model fits Holt-Winters (per Osama's notebook) to
-each country's series and projects 3 years ahead. Z-score anomalies on the
-residuals flag years that deviate sharply from the country's own trend.
+some swing wildly. The model fits each country's series and projects 3
+years ahead. Years that deviate sharply from the country's own trend
+are flagged automatically.
 
 Inputs:
     data/processed/country_forecasts.csv        (Entity, Code, Year, Deaths,
@@ -192,11 +192,12 @@ fc_df, anom_df = load_data()
 st.markdown(
     """
     <div class="eyebrow"><span class="marker"></span><span>04 / Trends</span></div>
-    <h1 class="page-title">Three decades, <span class="accent">forecast ahead.</span></h1>
+    <h1 class="page-title">Three decades, <span class="accent">projected ahead.</span></h1>
     <p class="page-lede">
         Per-country road-fatality trajectories from 1990 to 2019, with a
-        three-year Holt-Winters forecast and confidence band. Years that
-        sit far from the country's own trend are flagged as anomalies.
+        3-year projection based on past trend and a likely-range band.
+        Years where deaths spiked or dropped unusually compared to the
+        country's own trend are flagged automatically.
     </p>
     """,
     unsafe_allow_html=True,
@@ -239,7 +240,7 @@ with col_c:
 # ============================================================
 def get_country_series(country: str, metric: str) -> dict:
     """
-    Pull a country's observed history + HW forecast + CI.
+    Pull a country's observed history + 3-year projection + likely range.
     Returns dict with x_obs, y_obs, x_fc, y_fc, ci_lo, ci_hi (or None if missing).
     """
     sub = fc_df[fc_df["Entity"] == country].sort_values("Year")
@@ -257,7 +258,7 @@ def get_country_series(country: str, metric: str) -> dict:
         unit = "deaths per 100k"
     else:  # Absolute
         y_obs = obs["Deaths"].values
-        # Estimate absolute forecast: HW_Forecast (per 100k) * last known population / 100k
+        # Estimate absolute projection: rate per 100k * last known population / 100k
         # using the final observed Historical_Population as the population baseline.
         pop_last = obs["Historical_Population"].dropna().iloc[-1] if not obs["Historical_Population"].dropna().empty else None
         if pop_last and pd.notna(pop_last):
@@ -280,7 +281,7 @@ def get_country_series(country: str, metric: str) -> dict:
 
 
 def get_anomalies(country: str) -> pd.DataFrame:
-    """Pull the country's flagged anomaly years."""
+    """Pull the country's flagged unusual years."""
     return anom_df[anom_df["Entity"] == country].sort_values("Year")
 
 
@@ -314,18 +315,18 @@ for i, peer in enumerate(peers):
             hovertemplate=f"<b>{peer}</b><br>Year %{{x}}<br>%{{y:,.2f}}<extra></extra>",
         )
     )
-    # forecast (dashed, same color)
+    # projection (dashed, same color)
     if series["y_fc"] is not None and len(series["y_fc"]) > 0:
         fig.add_trace(
             go.Scatter(
                 x=series["x_fc"],
                 y=series["y_fc"],
                 mode="lines",
-                name=f"{peer} forecast",
+                name=f"{peer} projection",
                 line=dict(color=line_color, width=1.5, dash="dot"),
                 opacity=0.7,
                 showlegend=False,
-                hovertemplate=f"<b>{peer} (forecast)</b><br>Year %{{x}}<br>%{{y:,.2f}}<extra></extra>",
+                hovertemplate=f"<b>{peer} (projection)</b><br>Year %{{x}}<br>%{{y:,.2f}}<extra></extra>",
             )
         )
 
@@ -335,7 +336,7 @@ if anchor is None:
     st.error(f"No data for {main_country}")
     st.stop()
 
-# Confidence band first so it sits behind the line
+# Likely-range band first so it sits behind the line
 if anchor["ci_lo"] is not None and len(anchor["ci_lo"]) > 0:
     fig.add_trace(
         go.Scatter(
@@ -344,7 +345,7 @@ if anchor["ci_lo"] is not None and len(anchor["ci_lo"]) > 0:
             fill="toself",
             fillcolor="rgba(198, 255, 61, 0.22)",  # lime translucent
             line=dict(color="rgba(0,0,0,0)"),
-            name=f"{main_country} 95% CI",
+            name=f"{main_country} likely range",
             showlegend=True,
             hoverinfo="skip",
         )
@@ -363,9 +364,9 @@ fig.add_trace(
     )
 )
 
-# Forecast line — dashed lime
+# Projection line — dashed lime
 if anchor["y_fc"] is not None and len(anchor["y_fc"]) > 0:
-    # Connect last observed to first forecast so there's no visual gap
+    # Connect last observed to first projection so there's no visual gap
     x_bridge = [anchor["x_obs"][-1]] + list(anchor["x_fc"])
     y_bridge = [anchor["y_obs"][-1]] + list(anchor["y_fc"])
     fig.add_trace(
@@ -373,17 +374,17 @@ if anchor["y_fc"] is not None and len(anchor["y_fc"]) > 0:
             x=x_bridge,
             y=y_bridge,
             mode="lines+markers",
-            name=f"{main_country} forecast",
+            name=f"{main_country} projection",
             line=dict(color=COLORS["lime"], width=2.8, dash="dot"),
             marker=dict(
                 size=8, color=COLORS["lime"], symbol="diamond",
                 line=dict(color=COLORS["ink"], width=1.2),
             ),
-            hovertemplate=f"<b>{main_country} (forecast)</b><br>Year %{{x}}<br>%{{y:,.2f}}<extra></extra>",
+            hovertemplate=f"<b>{main_country} (projection)</b><br>Year %{{x}}<br>%{{y:,.2f}}<extra></extra>",
         )
     )
 
-# Anomaly markers on the anchor country
+# Unusual-year markers on the anchor country
 anchor_anoms = get_anomalies(main_country)
 if not anchor_anoms.empty:
     # we want to plot at the actual observed value for that year
@@ -395,9 +396,9 @@ if not anchor_anoms.empty:
             anom_x.append(yr)
             anom_y.append(obs_lookup[yr])
             direction = str(ar["Direction"])
-            anom_text.append(
-                f"{yr} &middot; {direction.replace('_', ' ')} &middot; z={ar['Z_Score']:.2f}"
-            )
+            # Plain-English direction label
+            dir_label = "spike above trend" if direction == "above_trend" else "drop below trend"
+            anom_text.append(f"{yr} &middot; {dir_label}")
             # color matches direction
             anom_color.append(
                 COLORS["lime"] if direction == "above_trend" else COLORS["ink"]
@@ -408,7 +409,7 @@ if not anchor_anoms.empty:
                 x=anom_x,
                 y=anom_y,
                 mode="markers",
-                name=f"{main_country} anomalies",
+                name=f"{main_country} unusual years",
                 marker=dict(
                     size=14,
                     color=anom_color,
@@ -425,7 +426,7 @@ last_obs_year = int(max(anchor["x_obs"]))
 fig.add_vline(
     x=last_obs_year,
     line=dict(color=COLORS["ink_mute"], width=1, dash="dash"),
-    annotation_text=f"forecast →",
+    annotation_text=f"projection →",
     annotation_position="top",
     annotation=dict(
         font=dict(family=FONTS["mono"], size=10, color=COLORS["ink_mute"]),
@@ -507,7 +508,7 @@ st.markdown(
         </div>
         <div class="stat-cell">
             <div class="stat-num">{proj_str}</div>
-            <div class="stat-label">3-yr forecast change</div>
+            <div class="stat-label">3-yr projected change</div>
         </div>
     </div>
     """,
@@ -515,22 +516,22 @@ st.markdown(
 )
 
 # ============================================================
-# ANOMALY YEARS for the anchor country
+# UNUSUAL YEARS for the anchor country
 # ============================================================
 st.markdown(
-    '<div class="eyebrow"><span class="marker"></span><span>Anomaly years</span></div>',
+    '<div class="eyebrow"><span class="marker"></span><span>Unusual years</span></div>',
     unsafe_allow_html=True,
 )
 
 if anchor_anoms.empty:
     st.markdown(
-        f'<div class="sub-eyebrow">No anomaly years flagged for {main_country}.</div>',
+        f'<div class="sub-eyebrow">No unusual years flagged for {main_country}.</div>',
         unsafe_allow_html=True,
     )
 else:
     st.markdown(
         f'<div class="sub-eyebrow">{len(anchor_anoms)} year(s) flagged &middot; '
-        'sorted by absolute Z-score (most extreme first)</div>',
+        'sorted by how far they deviated from the country\'s own trend (most extreme first)</div>',
         unsafe_allow_html=True,
     )
 
@@ -541,20 +542,20 @@ else:
     for _, ar in sorted_anoms.iterrows():
         direction = str(ar["Direction"])
         dir_class = "above" if direction == "above_trend" else "below"
-        dir_label = direction.replace("_", " ")
+        dir_label = "spike above trend" if direction == "above_trend" else "drop below trend"
         rows_html.append(
             f"""
             <div class="anomaly-row">
                 <span class="year">{int(ar['Year'])}</span>
                 <span class="dir {dir_class}">{dir_label}</span>
-                <span class="meta">observed {ar['DeathRate']:.2f}/100k &middot; trend {ar['Fitted']:.2f} &middot; z = {ar['Z_Score']:+.2f}</span>
+                <span class="meta">observed {ar['DeathRate']:.2f}/100k &middot; trend {ar['Fitted']:.2f} &middot; deviation {ar['Z_Score']:+.2f}σ</span>
             </div>
             """
         )
     st.markdown("".join(rows_html), unsafe_allow_html=True)
 
 # ============================================================
-# FOOTER NOTE
+# FOOTER NOTE — technical methodology stays here only
 # ============================================================
 st.markdown(
     f"""
